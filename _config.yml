@@ -13,7 +13,7 @@
 # you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
-title: trungtv.github.io
+title: Tran Viet Trung, SOICT
 email: trungtv at soict dot hust dot edu dot vn 
 description: >- # this means to ignore newlines until "baseurl:"
  It takes time to create excellence. If it could be done quickly, more people would do it. (John Wooden)

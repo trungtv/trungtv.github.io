@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # Welcome to Jekyll!
 #
 # This config file is meant for settings that affect your whole blog, values
@@ -40,9 +39,6 @@ plugins:
 #   - vendor/cache/
 #   - vendor/gems/
 #   - vendor/ruby/
-=======
----
-title: Trungtv.Github.Io
 timezone: UTC
 collections:
   blog:
@@ -54,5 +50,3 @@ collections:
   uploads:
     title: Uploads
     output: true
-theme: jekyll-theme-midnight
->>>>>>> a56a230106424dd99165e6880d999fa021ffaea9

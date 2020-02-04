@@ -1,0 +1,13 @@
+- name: pyvi
+  descr: "Python Vietnamese Toolkit"
+  image: pong.png
+  github: https://github.com/trungtv/pyvi
+- name: vispacy
+  descr: "vi_spacy contains Vietnamese models for spaCy. We trained word2vec on a combination of wikipedia and news corpus, vector size = 128. Pos tagger and DEP parser are trained on UD Vietnamese."
+  image: pong.png
+  github: https://github.com/trungtv/vi_spacy
+
+- name: yourway.vn (soon to be open-source)
+  descr: "This project aims at monitoring and analyzing public job descriptions and resumes to deliver labor market insights"
+  image: pong.png
+  github: http://parser.yourway.vn/

@@ -1,58 +1,71 @@
-<<<<<<< HEAD
-# Welcome to Jekyll!
 #
-# This config file is meant for settings that affect your whole blog, values
-# which you are expected to set up once and rarely edit after that. If you find
-# yourself editing this file very often, consider using Jekyll's data files
-# feature for the data you need to update frequently.
+###################################
+# Site wide configuration
+####################################
 #
-# For technical reasons, this file is *NOT* reloaded automatically when you use
-# 'bundle exec jekyll serve'. If you change this file, please restart the server process.
+title: Viet-Trung Tran
+email:
+description: A trungtv@soict personal page. 
+url: # the base hostname & protocol for your site
+keywords: ["blog", "jekyll"]
 
-# Site settings
-# These are used to personalize your new site. If you look in the HTML files,
-# you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
-# You can create any custom variable you would like, and they will be accessible
-# in the templates via {{ site.myvariable }}.
-title: trungtv.github.io
-email: trungtv at soict dot hust dot edu dot vn 
-description: >- # this means to ignore newlines until "baseurl:"
- It takes time to create excellence. If it could be done quickly, more people would do it. (John Wooden)
-baseurl: "" # the subpath of your site, e.g. /blog
-url: "" # the base hostname & protocol for your site, e.g. http://example.com
-twitter_username: viettrung.tran
-github_username:  trungtv
+#
+###################################
+# Jekyll configuration
+####################################
+#
+timezone:          Europe/Paris
+markdown:          kramdown
+highlighter:       rouge
+excerpt_separator: <!--more-->
+permalink:         /articles/:year-:month/:title
 
-# Build settings
-markdown: kramdown
-theme: jekyll-theme-time-machine
-plugins:
-  - jekyll-feed
+kramdown:
+  auto_ids: true
+  footnote_nr: 1
+  entity_output: as_char
+  toc_levels: 1..6
+  enable_coderay: false
 
-# Exclude from processing.
-# The following items will not be processed, by default. Create a custom list
-# to override the default setting.
-# exclude:
-#   - Gemfile
-#   - Gemfile.lock
-#   - node_modules
-#   - vendor/bundle/
-#   - vendor/cache/
-#   - vendor/gems/
-#   - vendor/ruby/
-=======
----
-title: Trungtv.Github.Io
-timezone: UTC
-collections:
-  blog:
-    title: Blog
-    output: true
-  posts:
-    title: Posts
-    output: true
-  uploads:
-    title: Uploads
-    output: true
-theme: jekyll-theme-midnight
->>>>>>> a56a230106424dd99165e6880d999fa021ffaea9
+#
+###################################
+# Site Owner configuration
+####################################
+#
+owner:
+  name: Viet-Trung Tran
+  avatar: trungtv.jpeg
+  job: "Assistant professor"
+  bio: "School of Information and Communication Technology (SOICT), <br> Hanoi University of Science and Technology (HUST)."
+  email: trungtv[@]soict.hust.edu[dot]vn
+  disqus-shortname:
+  twitter: #username
+  facebook: #username
+  google:
+    plus: #username
+    analytics:
+    verify:
+    ad-client:
+    ad-slot:
+  bing-verify:
+  github: trungtv
+  gitlab: #username
+  stackoverflow: #123456/username   from a "http://stackoverflow.com/users/123456/username" link
+  linkedin: viettrungtran
+  skype: #username
+  xing: #username
+  instagram: #username
+  lastfm: #username
+  tumblr: #username
+  pinterest: #username
+  foursquare: #username
+  steam: #username
+  dribbble: #username
+  youtube: #username
+  soundcloud: #username
+  weibo: #username
+  flickr: #username
+  500px: #username
+  codepen: #username
+  reddit: #username
+  telegram: #username

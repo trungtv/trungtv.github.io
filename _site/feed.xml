@@ -5,9 +5,26 @@
     <description>A trungtv@soict personal page.</description>
     <link>http://localhost:4000/</link>
     <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>2020-02-04</pubDate>
-    <lastBuildDate>Tue, 04 Feb 2020 17:35:55 +0100</lastBuildDate>
+    <pubDate>2020-02-17</pubDate>
+    <lastBuildDate>Mon, 17 Feb 2020 08:42:15 +0100</lastBuildDate>
     <generator>Jekyll v3.8.5</generator>
+    
+      <item>
+        <title>Hướng dẫn tham gia video call hướng dẫn các nhóm project, đồ án 20191</title>
+        <description>&lt;p&gt;Do tình hình dịch bênh covid-19 diễn biến phức tạp, các em sinh viên được phân công dưới sự hướng dẫn của thầy có thể tham gia nhóm trên Microsoft Teams của trường để thực hiện các buổi video call thay cho gặp mặt trực tiếp tại trường. 
+Các em dùng tài khoản email trường, tham gia nhóm tại link sau đây: &lt;a href=&quot;https://teams.microsoft.com/l/team/19%3a9c2c9c0d6af3493dac64fe25a4c7c424%40thread.skype/conversations?groupId=83d5c695-8fe0-4b12-aa3a-94dff1562b2e&amp;amp;tenantId=06f1b89f-07e8-464f-b408-ec1b45703f31&quot;&gt;Link tham gia&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Sau khi join nhóm, thầy sẽ thêm các em vào Channel tương ứng với kỳ học. Ví dụ: DATN.20191.&lt;br /&gt;
+&lt;strong&gt;Các em lưu lý, kênh trao đổi chính vẫn là nhóm trên facebook.&lt;/strong&gt;&lt;/p&gt;
+</description>
+        <pubDate>2020-02-17</pubDate>
+        <link>http://localhost:4000/articles/2020-02/huong-dan-do-an-online-qua-video-call</link>
+        <guid isPermaLink="true">http://localhost:4000/articles/2020-02/huong-dan-do-an-online-qua-video-call</guid>
+        
+        
+        <category>Guideline</category>
+        
+      </item>
     
       <item>
         <title>Hướng dẫn thực hiện công việc project, đồ án, TTDN</title>
@@ -56,7 +73,7 @@
 &lt;p&gt;LƯU Ý: Sinh viên không hoàn thiện theo đúng hướng dẫn sẽ không có điểm.&lt;/p&gt;
 
 </description>
-        <pubDate>2020-02-04</pubDate>
+        <pubDate>2020-02-17</pubDate>
         <link>http://localhost:4000/articles/2020-02/huong-dan-cong-viec-lam-project-doan</link>
         <guid isPermaLink="true">http://localhost:4000/articles/2020-02/huong-dan-cong-viec-lam-project-doan</guid>
         

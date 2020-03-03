@@ -1,5 +1,5 @@
 ---
-published: false
+published: true
 layout: post
 title: IT3120 - Phân tích thiết kế hệ thống thông tin
 categories:

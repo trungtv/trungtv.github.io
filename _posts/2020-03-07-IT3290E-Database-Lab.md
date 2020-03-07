@@ -24,5 +24,6 @@ share: true
 | 13 | Review  |   
 | 14 | Capstone project  |   
 | 15 | Capstone project  |   
+
 ## Tài liệu môn học
 [Gdrive folder](https://drive.google.com/drive/folders/0B8a305L6HNbwblZCQjNuLUxaNjg?usp=sharing)

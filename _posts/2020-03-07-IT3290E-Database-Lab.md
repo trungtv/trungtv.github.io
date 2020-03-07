@@ -8,7 +8,7 @@ share: true
 ---
 ## Schedule
 | Week | Subject  | 
-|---|---|
+| --- | --- |
 | 1 | Preparation for lab environment    |  
 | 2 | CREATE and ALTER table statements  |  
 | 3 | Basic SELECT statement (project, filter and sort)  |   

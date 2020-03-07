@@ -7,6 +7,7 @@ categories:
 share: true
 ---
 ## Schedule
+
 | Week | Subject  | 
 | --- | --- |
 | 1 | Preparation for lab environment    |  

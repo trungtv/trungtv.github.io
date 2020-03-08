@@ -5,9 +5,226 @@
     <description>A trungtv@soict personal page.</description>
     <link>http://localhost:4000/</link>
     <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>2020-02-17</pubDate>
-    <lastBuildDate>Mon, 17 Feb 2020 08:43:46 +0100</lastBuildDate>
+    <pubDate>2020-03-08</pubDate>
+    <lastBuildDate>Sun, 08 Mar 2020 11:46:53 +0100</lastBuildDate>
     <generator>Jekyll v3.8.5</generator>
+    
+      <item>
+        <title>Thông báo v/v tổ chức học online các lớp 20192</title>
+        <description>&lt;p&gt;Chào các em, 
+Mình đã gửi các em email để các em join vào microsoft teams, học online đúng giờ lên lớp theo lịch của trường. 
+Các em cài microsoft teams và đăng nhập bằng tài khoản email trường nhé. 
+&lt;a href=&quot;https://teams.microsoft.com/downloads&quot;&gt;https://teams.microsoft.com/downloads&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Đây là link tham gia vào Chanel của thầy: &lt;a href=&quot;https://teams.microsoft.com/l/team/19%3a9c2c9c0d6af3493dac64fe25a4c7c424%40thread.skype/conversations?groupId=83d5c695-8fe0-4b12-aa3a-94dff1562b2e&amp;amp;tenantId=06f1b89f-07e8-464f-b408-ec1b45703f31&quot;&gt;Trungtv.SOICT&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Danh sách các lớp thầy phụ trách:&lt;br /&gt;
+&lt;img src=&quot;/img/upload/20192_trungtv.png&quot; alt=&quot;20192_trungtv.png&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Các em join nếu không được thì email lại thầy gấp nhé.&lt;br /&gt;
+Thầy chào các em,&lt;/p&gt;
+</description>
+        <pubDate>2020-03-08</pubDate>
+        <link>http://localhost:4000/articles/2020-03/online-learning</link>
+        <guid isPermaLink="true">http://localhost:4000/articles/2020-03/online-learning</guid>
+        
+        
+        <category>Guideline</category>
+        
+      </item>
+    
+      <item>
+        <title>IT3290E - Database lab</title>
+        <description>&lt;h2 id=&quot;schedule&quot;&gt;Schedule&lt;/h2&gt;
+
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th&gt;Week&lt;/th&gt;
+      &lt;th&gt;Subject&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;1&lt;/td&gt;
+      &lt;td&gt;Preparation for lab environment&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;2&lt;/td&gt;
+      &lt;td&gt;CREATE and ALTER table statements&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;3&lt;/td&gt;
+      &lt;td&gt;Basic SELECT statement (project, filter and sort)&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;4&lt;/td&gt;
+      &lt;td&gt;INSERT, UPDATE and DELETE statements&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;5&lt;/td&gt;
+      &lt;td&gt;SQL Constraints&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;6&lt;/td&gt;
+      &lt;td&gt;SELECT with JOIN&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;7&lt;/td&gt;
+      &lt;td&gt;Aggregate Functions and Group by&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;8&lt;/td&gt;
+      &lt;td&gt;Mid-term assessment&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;9&lt;/td&gt;
+      &lt;td&gt;Sub-query statement&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;10&lt;/td&gt;
+      &lt;td&gt;String functions&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;11&lt;/td&gt;
+      &lt;td&gt;Date and time functions&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;12&lt;/td&gt;
+      &lt;td&gt;Review&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;13&lt;/td&gt;
+      &lt;td&gt;Review&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;14&lt;/td&gt;
+      &lt;td&gt;Capstone project&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;15&lt;/td&gt;
+      &lt;td&gt;Capstone project&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;h2 id=&quot;tài-liệu-môn-học&quot;&gt;Tài liệu môn học&lt;/h2&gt;
+&lt;p&gt;&lt;a href=&quot;https://drive.google.com/drive/folders/0B8a305L6HNbwblZCQjNuLUxaNjg?usp=sharing&quot;&gt;Gdrive folder&lt;/a&gt;&lt;/p&gt;
+</description>
+        <pubDate>2020-03-08</pubDate>
+        <link>http://localhost:4000/articles/2020-03/IT3290E-Database-Lab</link>
+        <guid isPermaLink="true">http://localhost:4000/articles/2020-03/IT3290E-Database-Lab</guid>
+        
+        
+        <category>Course</category>
+        
+      </item>
+    
+      <item>
+        <title>IT5426 - Học sâu</title>
+        <description>&lt;h2 id=&quot;tài-liệu-tham-khảo&quot;&gt;Tài liệu tham khảo&lt;/h2&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Bengio Y., Goodfellow, I.J. and Courville, A. (2015). Deep Learning. MIT Press.&lt;/li&gt;
+  &lt;li&gt;Pattanayak, Santanu. “Pro deep learning with TensorFlow: a mathematical approach to advanced artificial intelligence in Python.” (2017).&lt;/li&gt;
+  &lt;li&gt;Deng, Li, and Yang Liu, eds. Deep Learning in Natural Language Processing. Springer, 2018.&lt;/li&gt;
+  &lt;li&gt;Nikhil Ketkar. Deep Learning with Python : A Hands-on Introduction. 2017.&lt;/li&gt;
+  &lt;li&gt;Mukhopadhyay, Sayan. Advanced Data Analytics Using Python : With Machine Learning, Deep Learning and NLP Examples. 2018&lt;/li&gt;
+  &lt;li&gt;Géron, Aurélien. Hands-on machine learning with Scikit-Learn and TensorFlow: concepts, tools, and techniques to build intelligent systems. “ O’Reilly Media, Inc.”, 2017.&lt;/li&gt;
+  &lt;li&gt;Chollet, Francois. Deep learning with python. Manning Publications Co., 2017.
+Shukla, Nishant. Machine learning with TensorFlow. O’Reilly Media, 2017.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h2 id=&quot;nội-dung-bài-giảng&quot;&gt;Nội dung bài giảng&lt;/h2&gt;
+&lt;p&gt;&lt;a href=&quot;https://drive.google.com/drive/folders/1dr_WV1ORUhVRKhA9zqQrBfx3jmLA9IBV?usp=sharing&quot;&gt;Gdrive folder&lt;/a&gt;&lt;/p&gt;
+</description>
+        <pubDate>2020-03-08</pubDate>
+        <link>http://localhost:4000/articles/2020-03/it5426-intro-deep-learning</link>
+        <guid isPermaLink="true">http://localhost:4000/articles/2020-03/it5426-intro-deep-learning</guid>
+        
+        
+        <category>Course</category>
+        
+      </item>
+    
+      <item>
+        <title>IT4931 - Lưu trữ và xử lý dữ liệu lớn</title>
+        <description>&lt;h2 id=&quot;tài-liệu-tham-khảo&quot;&gt;Tài liệu tham khảo&lt;/h2&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Tiwari, Shashank. Professional NoSQL. John Wiley &amp;amp; Sons, 2011.&lt;/li&gt;
+  &lt;li&gt;Lam, Chuck. Hadoop in action. Manning Publications Co., 2010.&lt;/li&gt;
+  &lt;li&gt;Miner, Donald, and Adam Shook. MapReduce design patterns: building effective algorithms and analytics for Hadoop and other systems. “ O’Reilly Media, Inc.”, 2012.&lt;/li&gt;
+  &lt;li&gt;Karau, Holden. Fast Data Processing with Spark. Packt Publishing Ltd, 2013.&lt;/li&gt;
+  &lt;li&gt;Penchikala, Srini. Big data processing with apache spark. Lulu. com, 2018.&lt;/li&gt;
+  &lt;li&gt;White, Tom. Hadoop: The definitive guide. “ O’Reilly Media, Inc.”, 2012.&lt;/li&gt;
+  &lt;li&gt;Gandomi, Amir, and Murtaza Haider. “Beyond the hype: Big data concepts, methods, and analytics.” International Journal of Information Management 35.2 (2015): 137-144.&lt;/li&gt;
+  &lt;li&gt;Cattell, Rick. “Scalable SQL and NoSQL data stores.” Acm Sigmod Record 39.4 (2011): 12-27.&lt;/li&gt;
+  &lt;li&gt;Gessert, Felix, et al. “NoSQL database systems: a survey and decision guidance.” Computer Science-Research and Development 32.3-4 (2017): 353-365.&lt;/li&gt;
+  &lt;li&gt;George, Lars. HBase: the definitive guide: random access to your planet-size data. “ O’Reilly Media, Inc.”, 2011.&lt;/li&gt;
+  &lt;li&gt;Sivasubramanian, Swaminathan. “Amazon dynamoDB: a seamlessly scalable non-relational database service.” Proceedings of the 2012 ACM SIGMOD International Conference on Management of Data. ACM, 2012.&lt;/li&gt;
+  &lt;li&gt;Chan, L. “Presto: Interacting with petabytes of data at Facebook.” (2013).&lt;/li&gt;
+  &lt;li&gt;Garg, Nishant. Apache Kafka. Packt Publishing Ltd, 2013.&lt;/li&gt;
+  &lt;li&gt;Karau, Holden, et al. Learning spark: lightning-fast big data analysis. “ O’Reilly Media, Inc.”, 2015.&lt;/li&gt;
+  &lt;li&gt;Iqbal, Muhammad Hussain, and Tariq Rahim Soomro. “Big data analysis: Apache storm perspective.” International journal of computer trends and technology 19.1 (2015): 9-14.&lt;/li&gt;
+  &lt;li&gt;Toshniwal, Ankit, et al. “Storm@ twitter.” Proceedings of the 2014 ACM SIGMOD international conference on Management of data. ACM, 2014.&lt;/li&gt;
+  &lt;li&gt;Lin, Jimmy. “The lambda and the kappa.” IEEE Internet Computing 21.5 (2017): 60-66.
+ 
+    &lt;h2 id=&quot;nội-dung-bài-giảng&quot;&gt;Nội dung bài giảng&lt;/h2&gt;
+    &lt;p&gt;&lt;a href=&quot;https://drive.google.com/drive/folders/1vlxnuG3RAnOcNy2rEjkVsYcvs6TLh7gR?usp=sharing&quot;&gt;Gdrive folder&lt;/a&gt;&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+</description>
+        <pubDate>2020-03-08</pubDate>
+        <link>http://localhost:4000/articles/2020-03/it4931-luu-tru-va-xu-ly-du-lieu-lon</link>
+        <guid isPermaLink="true">http://localhost:4000/articles/2020-03/it4931-luu-tru-va-xu-ly-du-lieu-lon</guid>
+        
+        
+        <category>Course</category>
+        
+      </item>
+    
+      <item>
+        <title>IT3120 - Phân tích thiết kế hệ thống thông tin</title>
+        <description>&lt;h2 id=&quot;sách-tham-khảo&quot;&gt;Sách tham khảo&lt;/h2&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Satzinger, John W., Robert B. Jackson, and Stephen D. Burd. Systems analysis and design in a changing world. Cengage learning, 2011.&lt;/li&gt;
+  &lt;li&gt;Pressman, Roger S. Software engineering: a practitioner’s approach. Palgrave macmillan, 2005.&lt;/li&gt;
+  &lt;li&gt;Kendall, Kenneth E., and Julie E. Kendall. Systems analysis and design. Prentice Hall Press, 2010.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h2 id=&quot;nội-dung-bài-giảng&quot;&gt;Nội dung bài giảng&lt;/h2&gt;
+&lt;p&gt;&lt;a href=&quot;https://drive.google.com/drive/folders/1fiMuY2jBUtoiNk213qhEvDmB2Y4brnBs?usp=sharing&quot;&gt;Gdrive folder&lt;/a&gt;&lt;/p&gt;
+</description>
+        <pubDate>2020-03-08</pubDate>
+        <link>http://localhost:4000/articles/2020-03/it3120-phan-tich-thiet-ke-he-thong-thong-tin</link>
+        <guid isPermaLink="true">http://localhost:4000/articles/2020-03/it3120-phan-tich-thiet-ke-he-thong-thong-tin</guid>
+        
+        
+        <category>Course</category>
+        
+      </item>
+    
+      <item>
+        <title>IT3090 - Nhập môn Cơ sở dữ liệu</title>
+        <description>&lt;h2 id=&quot;tài-liệu-tham-khảo&quot;&gt;Tài liệu tham khảo&lt;/h2&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Elmasri, Ramez, and Sham Navathe. Fundamentals of database systems. Vol. 7. Pearson, 2017.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h2 id=&quot;nội-dung-bài-giảng&quot;&gt;Nội dung bài giảng&lt;/h2&gt;
+&lt;p&gt;&lt;a href=&quot;https://drive.google.com/drive/folders/0B8a305L6HNbwckpEVzdwTThNYWs?usp=sharing&quot;&gt;Gdrive folder&lt;/a&gt;&lt;/p&gt;
+</description>
+        <pubDate>2020-03-08</pubDate>
+        <link>http://localhost:4000/articles/2020-03/it3090-CSDL</link>
+        <guid isPermaLink="true">http://localhost:4000/articles/2020-03/it3090-CSDL</guid>
+        
+        
+        <category>Course</category>
+        
+      </item>
     
       <item>
         <title>Hướng dẫn tham gia video call hướng dẫn các nhóm project, đồ án 20191</title>
@@ -17,7 +234,7 @@ Các em dùng tài khoản email trường, tham gia nhóm tại link sau đây:
 &lt;p&gt;Sau khi join nhóm, thầy sẽ thêm các em vào Channel tương ứng với kỳ học. Ví dụ: DATN.20191.&lt;br /&gt;
 &lt;strong&gt;Các em lưu lý, kênh trao đổi chính vẫn là nhóm trên facebook.&lt;/strong&gt;&lt;/p&gt;
 </description>
-        <pubDate>2020-02-17</pubDate>
+        <pubDate>2020-03-08</pubDate>
         <link>http://localhost:4000/articles/2020-02/huong-dan-do-an-online-qua-video-call</link>
         <guid isPermaLink="true">http://localhost:4000/articles/2020-02/huong-dan-do-an-online-qua-video-call</guid>
         
@@ -73,7 +290,7 @@ Các em dùng tài khoản email trường, tham gia nhóm tại link sau đây:
 &lt;p&gt;LƯU Ý: Sinh viên không hoàn thiện theo đúng hướng dẫn sẽ không có điểm.&lt;/p&gt;
 
 </description>
-        <pubDate>2020-02-17</pubDate>
+        <pubDate>2020-03-08</pubDate>
         <link>http://localhost:4000/articles/2020-02/huong-dan-cong-viec-lam-project-doan</link>
         <guid isPermaLink="true">http://localhost:4000/articles/2020-02/huong-dan-cong-viec-lam-project-doan</guid>
         

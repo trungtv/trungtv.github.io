@@ -1,5 +1,5 @@
 ---
-published: false
+published: true
 layout: post
 title: >-
   HƯỚNG DẪN BẢO VỆ ĐỒ ÁN TỐT NGHIỆP (BẢN ĐẦY ĐỦ NHẤT) DÀNH CHO SINH VIÊN K60 SẮP

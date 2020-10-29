@@ -28,3 +28,5 @@ share: true
  
 ## Nội dung bài giảng
 [Gdrive folder](https://drive.google.com/drive/folders/1vlxnuG3RAnOcNy2rEjkVsYcvs6TLh7gR?usp=sharing)
+[Lab on Gdrive](https://drive.google.com/drive/folders/1-5jVMVIb-t8lRdFLS4nqdZuQFb-Tw4KF?usp=sharing)
+[Lab on github](https://github.com/trungtv/IT4931_data_management_and_processing_lab_materials)

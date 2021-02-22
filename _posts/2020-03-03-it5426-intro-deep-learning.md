@@ -18,4 +18,4 @@ share: true
 Shukla, Nishant. Machine learning with TensorFlow. O'Reilly Media, 2017.
 
 ## Nội dung bài giảng
-[Gdrive folder](https://drive.google.com/drive/folders/1dr_WV1ORUhVRKhA9zqQrBfx3jmLA9IBV?usp=sharing)
+[Gdrive folder](https://drive.google.com/drive/folders/1f1gM_xE918tmeBy6cSBEHUQQiGVh8b0d?usp=sharing)

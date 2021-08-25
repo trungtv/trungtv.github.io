@@ -8,7 +8,9 @@ categories:
   - Guideline
 share: true
 ---
-Nguồn:
+## SINH VIÊN THẦY TRUNG HƯỚNG DẪN HOẶC PHẢN BIỆN CHÚ Ý
+Sinh viên nộp báo cáo, đồ án tốt nghiệp trước bảo vệ, phản biện [**vào đây.**](https://docs.google.com/forms/d/e/1FAIpQLSeoDe2lg3QAHRjJySZ4p0CJAIks7A7DWIRD7b6Xc8R4X-pdbA/viewform?fbclid=IwAR3yAy-QpMu9T63qknhzZPT7EuRl9UKhJ8VC88wbotY1kxKKglbyEcl-lOo)
+## Nguồn bài viết:
 	- Bài viết: Thầy Nguyễn Tiến Dũng (ĐHBKHN)
 	- Bonus: Thầy Lê Đức Trung (ĐHBKHN)
 

@@ -1,5 +1,10 @@
 ---
 published: false
+layout: post
+categories:
+  - Course
+share: true
+publish: true
 ---
 ## IT5425 Quản trị dữ liệu và trực quan hóa (Data management and visualization)
 

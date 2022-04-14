@@ -1,13 +1,16 @@
 ---
 layout: post
-title: "Hướng dẫn thực hiện công việc project, đồ án, TTDN"
-categories: [Guideline]
+title: 'Hướng dẫn thực hiện công việc project, đồ án, TTDN'
+categories:
+  - Guideline
 share: true
+published: true
 ---
+0. Join Microsoft Teams và tạo channel riêng cho nhóm theo hướng dẫn của giáo viên. 
 1. Join group nhóm sinh viên làm việc với giáo viên hướng dẫn trên [facebook](https://www.facebook.com/groups/itbee.soict/)
 2. Đăng ký trên [Link Google Form](https://docs.google.com/forms/d/e/1FAIpQLSd22vGSppy8nw_0ZatTVtKh4oLTZFUJoJyUi4rd1QvP0QNhhA/viewform?c=0&w=1). Mỗi sinh viên đăng ký riêng vào form để phục vụ công tác quản lý, vào điểm **[KHÔNG ĐĂNG KÝ DỄ DẪN ĐẾN SAI SÓT KHÔNG CÓ ĐIỂM]**.
 
-3. SV chia sẻ thư mục đồ án trên [google drive](https://support.google.com/drive/answer/2494822?hl=vi&ref_topic=2525251&fbclid=IwAR1gOSpzWHbjQUg2dGgVN9pg8-x_MRSxeFitlfYs9OiPcIWMub58i4mvn4Q) cho giáo viên hướng dẫn (vào email [trungtv@soict.hust.edu.vn](mailto:trungtv@soict.hust.edu.vn)). Mỗi nhóm chung 1 thư mục. 
+3. SV chia sẻ thư mục đồ án trên [google drive](https://support.google.com/drive/answer/2494822?hl=vi&ref_topic=2525251&fbclid=IwAR1gOSpzWHbjQUg2dGgVN9pg8-x_MRSxeFitlfYs9OiPcIWMub58i4mvn4Q) cho giáo viên hướng dẫn (vào email [trungtv@soict.hust.edu.vn](mailto:trungtv@soict.hust.edu.vn)). Mỗi nhóm chung 1 thư mục. (Trong trường hợp không sử dụng github thì thêm user https://github.com/trungtv vào repo) 
 
 	Cách đặt tên thư mục:  \[Type\]\_\[0\]\_\[1\]\_\[2\]\_\[3\]\_\[4\]
 	* \[Type\] nếu là project thì là P, là đồ án thì ghi DA,
@@ -36,5 +39,4 @@ share: true
 
 6. FINAL: Cuối mỗi kỳ, sinh viên cập nhật 1 bản báo cáo cuối cùng [vào đây](https://docs.google.com/forms/d/e/1FAIpQLSeoDe2lg3QAHRjJySZ4p0CJAIks7A7DWIRD7b6Xc8R4X-pdbA/viewform?fbclid=IwAR3yAy-QpMu9T63qknhzZPT7EuRl9UKhJ8VC88wbotY1kxKKglbyEcl-lOo).
 
-LƯU Ý: Sinh viên không hoàn thiện theo đúng hướng dẫn sẽ không có điểm. 
-
+LƯU Ý: Sinh viên không hoàn thiện theo đúng hướng dẫn sẽ không có điểm.

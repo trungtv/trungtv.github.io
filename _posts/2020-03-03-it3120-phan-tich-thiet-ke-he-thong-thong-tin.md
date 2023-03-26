@@ -16,34 +16,40 @@ share: true
 [Gdrive folder](https://drive.google.com/drive/folders/1fiMuY2jBUtoiNk213qhEvDmB2Y4brnBs?usp=sharing)
 
 ### Kế hoạch học tập
-- Week 1. Introduction to Systems analysis and design
-- Week 2. System development life cicle
-- Week 3. Project management 
-	- Teamwork: Vision document
-- Week 4.
-	- Teamwork: Vision document showcase
-- Week 5. Requirement analysis
-	- Use cases
-    - Functional requirements
-    - Non-functional requirements
-- Week 6. System analysis  
-	- Use case diagrams
-    - Domain modeling
-- Week 7. 
-	- Teamwork: Showcase
+- Week 1.
+		- Introduction to Systems analysis and design
+		- System development life cicle
+- Week 2.
+		- System development life cicle (cont.)
+        - Project management overview 
+- Week 3.
+	**Teamwork checkpoint**
+		- Vision document showcase
+- Week 4. 
+		- Requirement analysis
+        - Intro UML
+- Week 5. 
+		- Functional analysis 
+- Week 6.
+		- Structural analysis
+- Week 7.
+		- Structural analysis (cont.)
 - Week 8.
-	- Activity Diagrams
-    - System Sequence Diagrams
+	**Teamwork checkpoint**
+- Week 9.
+		- Interactive analysis
 - Week 10.
-	- Teamwork: Showcase
-- Week 11.
-	- Teamwork: Showcase
-- Week 12. Systems design
-	- Architectual design
+		- Interactive analysis (cont.)
+- Week 11. 
+		- Behavioral_analysis
+- Week 12.
+        - Class and database design 
 - Week 13.
-	- Database design 
-	- UI/UX design
+		- System design
+        - UI UX design	
 - Week 14. 
-    - Capstone
-- Week 15.
-	- Capstone
+	    - Capstone
+- Week 15. 
+	    - Capstone
+- Week 16.
+		- Capstone

@@ -4,6 +4,7 @@ layout: post
 categories:
   - Project topics for students
 share: true
+title: Nền tảng gán nhãn dữ liệu cộng đồng
 ---
 ## Trạng thái: CLOSED
 

@@ -1,4 +1,5 @@
 ---
+published: true
 layout: post
 title: IT4931 - Lưu trữ và xử lý dữ liệu lớn
 categories:
@@ -6,7 +7,6 @@ categories:
 share: true
 ---
 ## Lịch giảng dạy 
-Thank you for providing the detailed course outline. I'll create a markdown table with this information, organizing it by weeks and content. Here's the revised schedule:
 
 | T | Nội dung |
 |---|----------|

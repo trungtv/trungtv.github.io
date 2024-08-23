@@ -12,20 +12,21 @@ share: true
 |---|----------|
 | 1 | **Chương 1: Tổng quan về lưu trữ và xử lý dữ liệu lớn**
 | 2 | **Chương 2: Hệ sinh thái Hadoop**
-| 3 | **Chương 3: Hệ thống tệp phân tán Hadoop (HDFS)**
-| 4 | **Chương 4: Cơ sở dữ liệu quan hệ NoSQL - phần 1**
-| 5 | **Chương 4: Cơ sở dữ liệu quan hệ NoSQL - phần 2**
-| 6 | **Chương 4: Cơ sở dữ liệu quan hệ NoSQL - phần 3**
-| 7 | **Chương 5: Hệ thống nhắn tin phân tán**
-| 8 | **Chương 6: Kỹ thuật xử lý dữ liệu lớn - Spark**
-| 9 | **Chương 6: Kỹ thuật xử lý dữ liệu lớn - Spark phần 2**
-| 10 | **Chương 7: Kỹ thuật xử lý luồng dữ liệu lớn - Spark structured streaming**
-| 11 | **Chương 8: Kiến trúc dữ liệu lớn**
+| 3 | **Chương 8: Kiến trúc dữ liệu lớn + Giới thiệu bài tập lớn**
+| 4 | **Chương 3: Hệ thống tệp phân tán Hadoop (HDFS)**
+| 5 | **Chương 4: Cơ sở dữ liệu quan hệ NoSQL - phần 1**
+| 6 | **Chương 4: Cơ sở dữ liệu quan hệ NoSQL - phần 2**
+| 7 | **Chương 4: Cơ sở dữ liệu quan hệ NoSQL - phần 3**
+| 8 | **Chương 5: Hệ thống nhắn tin phân tán**
+| 9 | **Chương 6: Kỹ thuật xử lý dữ liệu lớn - Spark**
+| 10 | **Chương 6: Kỹ thuật xử lý dữ liệu lớn - Spark phần 2**
+| 11 | **Chương 7: Kỹ thuật xử lý luồng dữ liệu lớn - Spark structured streaming**
 | 12 | **Chương 9: Phân tích dữ liệu lớn**
 | 13 | Thuyết trình dự án tổng hợp |
 | 14 | Thuyết trình dự án tổng hợp |
 | 15 | Thuyết trình dự án tổng hợp |
 | 16 | Tổng kết |
+
 
 This schedule covers 15 weeks, with the main content spread across the first 12 weeks and the last 3 weeks dedicated to capstone project presentations. Is there anything you'd like me to modify or explain further about this schedule?
 ## Tài liệu tham khảo

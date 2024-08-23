@@ -1,5 +1,4 @@
 ---
-published: true
 layout: post
 title: IT4931 - Lưu trữ và xử lý dữ liệu lớn
 categories:

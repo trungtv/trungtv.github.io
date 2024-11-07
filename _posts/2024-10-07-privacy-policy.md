@@ -73,9 +73,9 @@ We may update this Privacy Policy from time to time. We will notify you of any c
 
 If you have any questions about this Privacy Policy, please contact us:
 
-- Email: [Your Email]
-- Website: [Your Website]
-- Address: [Your Address]
+- Email: trungtv@soict.hust.edu.vn
+- Website: trungtv.github.io
+- Address: 1A Dai Co Viet, Hai Ba Trung, Ha noi, Viet Nam
 
 ## 10. Consent
 

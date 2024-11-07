@@ -7,7 +7,7 @@ share: true
 ---
 # Privacy Policy
 
-*Last updated: October 7th 2024*
+*Last updated: October 6th 2024*
 
 ## 1. Introduction
 

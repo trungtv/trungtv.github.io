@@ -1,3 +1,10 @@
+---
+published: true
+layout: post
+categories:
+  - Others
+share: true
+---
 # Privacy Policy
 
 *Last updated: October 7th 2024*

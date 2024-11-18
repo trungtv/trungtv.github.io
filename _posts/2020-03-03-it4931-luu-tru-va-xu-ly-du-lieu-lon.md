@@ -68,10 +68,12 @@ Project yêu cầu sử dụng các công nghệ core bao gồm:
 - Apache Spark cho xử lý dữ liệu (PySpark hoặc Scala)
 - Hệ thống lưu trữ phân tán (HDFS hoặc tương đương)
 - Message queue system (Apache Kafka, RabbitMQ,...)
-- NoSQL database cho serving layer
+- NoSQL database 
+- Môi trường triển khai: k8s hoặc cloud (Không khuyến khích docker vì k8s gần với môi trường production hơn)
 
 ### Yêu cầu về xử lý dữ liệu với Spark
-Sinh viên cần thể hiện khả năng sử dụng Spark ở mức độ intermediate thông qua việc áp dụng đa dạng các transformation và action:
+Sinh viên cần thể hiện khả năng sử dụng Spark ở mức độ intermediate thông qua việc áp dụng đa dạng các transformation và action. Nếu không sử dụng spark mà sử dụng các framework tương đương thì cần trình bày rõ kiến trúc xử lý, ưu nhược điểm của framework này so sánh tương quan với spark.  
+
 
 1. **Complex Aggregations**
    - Window functions và các hàm aggregation phức tạp
@@ -108,15 +110,13 @@ Sinh viên cần thể hiện khả năng sử dụng Spark ở mức độ inte
 ## II. Yêu cầu Nội dung Báo cáo
 
 ### 1. Đặt vấn đề
-- Bài toán thực tế được lựa chọn
-- Business requirements và technical requirements
+- Bài toán được lựa chọn
 - Phân tích tính phù hợp của bài toán với big data
 - Phạm vi và giới hạn của project
 
 ### 2. Kiến trúc và Thiết kế
 - Kiến trúc tổng thể (Lambda/Kappa)
 - Chi tiết từng component và vai trò
-- Công nghệ sử dụng và justification
 - Data flow và component interaction diagrams
 
 ### 3. Chi tiết triển khai
@@ -219,4 +219,3 @@ Sinh viên cần thể hiện khả năng sử dụng Spark ở mức độ inte
     - Data replication
     - Backup strategies
     - Disaster recovery
-

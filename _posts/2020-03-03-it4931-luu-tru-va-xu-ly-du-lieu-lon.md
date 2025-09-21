@@ -16,9 +16,9 @@ share: true
 | 2 | **Chương 2: Hệ sinh thái Hadoop**
 | 3 | **Chương 8: Kiến trúc dữ liệu lớn + Giới thiệu bài tập lớn**
 | 4 | **Chương 3: Hệ thống tệp phân tán Hadoop (HDFS)**
-| 5 | **Chương 4: Cơ sở dữ liệu quan hệ NoSQL - phần 1**
-| 6 | **Chương 4: Cơ sở dữ liệu quan hệ NoSQL - phần 2**
-| 7 | **Chương 4: Cơ sở dữ liệu quan hệ NoSQL - phần 3**
+| 5 | **Chương 4: Cơ sở dữ liệu phi quan hệ NoSQL - phần 1**
+| 6 | **Chương 4: Cơ sở dữ liệu phi quan hệ NoSQL - phần 2**
+| 7 | **Chương 4: Cơ sở dữ liệu phi quan hệ NoSQL - phần 3**
 | 8 | **Chương 5: Hệ thống truyền thông điệp phân tán**
 | 9 | **Chương 6: Kỹ thuật xử lý dữ liệu lớn - Spark**
 | 10 | **Chương 6: Kỹ thuật xử lý dữ liệu lớn - Spark phần 2**
@@ -38,9 +38,9 @@ share: true
 | 2    | Chapter 2: The Hadoop Ecosystem                                               |
 | 3    | Chapter 8: Big Data Architecture + Introduction to the Capstone Project       |
 | 4    | Chapter 3: Hadoop Distributed File System (HDFS)                              |
-| 5    | Chapter 4: NoSQL Databases – Part 1                                           |
-| 6    | Chapter 4: NoSQL Databases – Part 2                                           |
-| 7    | Chapter 4: NoSQL Databases – Part 3                                           |
+| 5    | Chapter 4: NoSQL Storage – Part 1                                           |
+| 6    | Chapter 4: NoSQL Storage – Part 2                                           |
+| 7    | Chapter 4: NoSQL Storage – Part 3                                           |
 | 8    | Chapter 5: Distributed Messaging Systems                                      |
 | 9    | Chapter 6: Big Data Processing Techniques – Spark                             |
 | 10   | Chapter 6: Big Data Processing Techniques – Spark (Part 2)                    |

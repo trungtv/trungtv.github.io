@@ -29,30 +29,6 @@ share: true
 | 15 | Thuyết trình dự án tổng hợp |
 | 16 | Tổng kết |
 
-
-**Teaching Schedule**
-
-| Week | Content                                                                       |
-| ---- | ----------------------------------------------------------------------------- |
-| 1    | Chapter 1: Overview of Big Data Storage and Processing                        |
-| 2    | Chapter 2: The Hadoop Ecosystem                                               |
-| 3    | Chapter 8: Big Data Architecture + Introduction to the Capstone Project       |
-| 4    | Chapter 3: Hadoop Distributed File System (HDFS)                              |
-| 5    | Chapter 4: NoSQL Storage – Part 1                                           |
-| 6    | Chapter 4: NoSQL Storage – Part 2                                           |
-| 7    | Chapter 4: NoSQL Storage – Part 3                                           |
-| 8    | Chapter 5: Distributed Messaging Systems                                      |
-| 9    | Chapter 6: Big Data Processing Techniques – Spark                             |
-| 10   | Chapter 6: Big Data Processing Techniques – Spark (Part 2)                    |
-| 11   | Chapter 7: Big Data Stream Processing Techniques – Spark Structured Streaming |
-| 12   | Chapter 9: Big Data Analytics                                                 |
-| 13   | Capstone Project Presentations                                                |
-| 14   | Capstone Project Presentations                                                |
-| 15   | Capstone Project Presentations                                                |
-| 16   | Course Wrap-Up                                                                |
-
-
-This schedule covers 15 weeks, with the main content spread across the first 12 weeks and the last 3 weeks dedicated to capstone project presentations. Is there anything you'd like me to modify or explain further about this schedule?
 ## Tài liệu tham khảo
 
 1. Tiwari, Shashank. Professional NoSQL. John Wiley & Sons, 2011.
@@ -81,191 +57,191 @@ This schedule covers 15 weeks, with the main content spread across the first 12 
 [Lab on github](https://github.com/trungtv/IT4931_data_management_and_processing_lab_materials)
 
 
-# Guidelines for Milestone Project - Course on Big Data Storage and Processing
+# Hướng dẫn bài tập lớn - Môn Lưu trữ và xử lý dữ liệu lớn
 
-## I. Objectives and General Requirements
+## I. Mục tiêu và yêu cầu chung
 
-The milestone project requires students to build a complete big data processing system, applying learned knowledge to solve a real-world problem. Students must implement one of the two popular architectural models: **Lambda Architecture** or **Kappa Architecture**, focusing on building an **end-to-end data pipeline** covering data ingestion, processing, storage, and result visualization.
+Bài tập lớn yêu cầu sinh viên xây dựng một hệ thống xử lý dữ liệu lớn hoàn chỉnh, vận dụng kiến thức đã học để giải quyết bài toán thực tế. Sinh viên phải triển khai một trong hai mô hình kiến trúc phổ biến: **Kiến trúc Lambda** hoặc **Kiến trúc Kappa**, tập trung xây dựng **pipeline dữ liệu end-to-end** bao gồm thu thập dữ liệu, xử lý, lưu trữ và trực quan hóa kết quả.
 
-### Technical Requirements
+### Yêu cầu kỹ thuật
 
-The project must use the following core technologies:
+Dự án phải sử dụng các công nghệ cốt lõi sau:
 
-* **Apache Spark** for data processing (PySpark or Scala)
-* **Distributed storage system** (HDFS or equivalent)
-* **Message queue system** (Apache Kafka, RabbitMQ, etc.)
-* **NoSQL database**
-* **Deployment environment**: Kubernetes or Cloud (Docker is not encouraged because Kubernetes is closer to production environments)
+* **Apache Spark** cho xử lý dữ liệu (PySpark hoặc Scala)
+* **Hệ thống lưu trữ phân tán** (HDFS hoặc tương đương)
+* **Hệ thống hàng đợi tin nhắn** (Apache Kafka, RabbitMQ, v.v.)
+* **Cơ sở dữ liệu NoSQL**
+* **Môi trường triển khai**: Kubernetes hoặc Cloud (không khuyến khích Docker vì Kubernetes gần với môi trường production hơn)
 
-### Data Processing Requirements with Spark
+### Yêu cầu xử lý dữ liệu với Spark
 
-Students need to demonstrate **intermediate-level Spark skills** by applying diverse transformations and actions.
-If Spark is not used, but another equivalent framework is applied, the architecture must be clearly explained, with a comparison of strengths and weaknesses relative to Spark.
+Sinh viên cần thể hiện **kỹ năng Spark mức trung cấp** thông qua các phép biến đổi và hành động đa dạng.
+Nếu không dùng Spark mà dùng framework tương đương khác, cần giải thích rõ kiến trúc và so sánh ưu nhược điểm so với Spark.
 
-1. **Complex Aggregations**
+1. **Tổng hợp phức tạp**
 
-   * Window functions and advanced aggregation functions
-   * Pivot and unpivot operations
-   * Custom aggregation functions
+   * Hàm cửa sổ và hàm tổng hợp nâng cao
+   * Thao tác pivot và unpivot
+   * Hàm tổng hợp tùy biến
 
-2. **Advanced Transformations**
+2. **Biến đổi nâng cao**
 
-   * Multiple stages of transformations
-   * Chaining complex operations
-   * Custom UDFs for specific business logic
+   * Nhiều giai đoạn biến đổi
+   * Chuỗi thao tác phức tạp
+   * UDF tùy biến cho logic nghiệp vụ
 
-3. **Join Operations**
+3. **Thao tác Join**
 
-   * Broadcast joins for unbalanced datasets
-   * Sort-merge joins for large-scale data
-   * Multiple joins optimization
+   * Broadcast join cho tập dữ liệu không cân bằng
+   * Sort-merge join cho dữ liệu quy mô lớn
+   * Tối ưu nhiều join
 
-4. **Performance Optimization**
+4. **Tối ưu hiệu năng**
 
-   * Partition pruning and bucketing
-   * Caching and persistence strategies
-   * Query optimization and execution plans
+   * Partition pruning và bucketing
+   * Chiến lược cache và persistence
+   * Tối ưu truy vấn và kế hoạch thực thi
 
-5. **Streaming Processing**
+5. **Xử lý luồng (Streaming)**
 
-   * Structured Streaming with various output modes
-   * Watermarking and late data handling
-   * State management in streaming
-   * Exactly-once processing guarantees
+   * Structured Streaming với các chế độ output
+   * Watermarking và xử lý dữ liệu đến trễ
+   * Quản lý state trong streaming
+   * Đảm bảo xử lý exactly-once
 
-6. **Advanced Analytics**
+6. **Phân tích nâng cao**
 
-   * Machine learning with Spark MLlib
-   * Graph processing with GraphFrames
-   * Statistical computations
-   * Time series analysis
+   * Học máy với Spark MLlib
+   * Xử lý đồ thị với GraphFrames
+   * Tính toán thống kê
+   * Phân tích chuỗi thời gian
 
-## II. Report Requirements
+## II. Yêu cầu báo cáo
 
-### 1. Problem Definition
+### 1. Định nghĩa bài toán
 
-* Selected problem
-* Analysis of the problem’s suitability for big data
-* Scope and limitations of the project
+* Bài toán lựa chọn
+* Phân tích mức độ phù hợp của bài toán với dữ liệu lớn
+* Phạm vi và giới hạn của dự án
 
-### 2. Architecture and Design
+### 2. Kiến trúc và thiết kế
 
-* Overall architecture (Lambda/Kappa)
-* Detailed components and their roles
-* Data flow and component interaction diagrams
+* Kiến trúc tổng thể (Lambda/Kappa)
+* Các thành phần chi tiết và vai trò
+* Sơ đồ luồng dữ liệu và tương tác giữa các thành phần
 
-### 3. Implementation Details
+### 3. Chi tiết triển khai
 
-* Source code with full documentation
-* Environment-specific configuration files
-* Deployment strategy
-* Monitoring setup
+* Mã nguồn kèm tài liệu đầy đủ
+* File cấu hình theo môi trường
+* Chiến lược triển khai
+* Thiết lập giám sát
 
-### 4. Lessons Learned
+### 4. Bài học kinh nghiệm (Lessons Learned)
 
-#### Template for each lesson:
+#### Mẫu cho mỗi bài học:
 
 ```
-### Lesson X: [Lesson Title]
+### Bài học X: [Tiêu đề]
 
-#### Problem Description
-- Context and background
-- Challenges encountered
-- System impact
+#### Mô tả vấn đề
+- Bối cảnh và nền tảng
+- Thách thức gặp phải
+- Tác động đến hệ thống
 
-#### Approaches Tried
-- Approach 1: ...
-- Approach 2: ...
-- Trade-offs of each approach
+#### Cách tiếp cận đã thử
+- Cách 1: ...
+- Cách 2: ...
+- Đánh đổi của từng cách
 
-#### Final Solution
-- Detailed solution
-- Implementation details
-- Metrics and results
+#### Giải pháp cuối cùng
+- Giải pháp chi tiết
+- Chi tiết triển khai
+- Chỉ số và kết quả
 
-#### Key Takeaways
-- Technical insights
-- Best practices
-- Recommendations
+#### Điểm rút ra
+- Hiểu biết kỹ thuật
+- Thực hành tốt
+- Đề xuất
 ```
 
-#### Categories of lessons to be covered:
+#### Các nhóm bài học cần có:
 
-1. **Lessons on Data Ingestion**
+1. **Bài học về Thu thập dữ liệu**
 
-   * Handling multiple diverse data sources
-   * Ensuring data quality
-   * Handling late-arriving data
-   * Managing duplicates and data versioning
+   * Xử lý nhiều nguồn dữ liệu đa dạng
+   * Đảm bảo chất lượng dữ liệu
+   * Xử lý dữ liệu đến trễ
+   * Quản lý trùng lặp và phiên bản dữ liệu
 
-2. **Lessons on Data Processing with Spark**
+2. **Bài học về Xử lý dữ liệu với Spark**
 
-   * Optimizing Spark jobs
-   * Memory management
-   * Partition tuning
-   * Cost-based optimization
+   * Tối ưu job Spark
+   * Quản lý bộ nhớ
+   * Điều chỉnh partition
+   * Tối ưu dựa trên chi phí
 
-3. **Lessons on Stream Processing**
+3. **Bài học về Xử lý luồng**
 
-   * Exactly-once processing
-   * Windowing strategies
-   * State management
-   * Recovery mechanisms
+   * Xử lý exactly-once
+   * Chiến lược cửa sổ
+   * Quản lý state
+   * Cơ chế phục hồi
 
-4. **Lessons on Data Storage**
+4. **Bài học về Lưu trữ dữ liệu**
 
-   * Choosing storage formats
-   * Partitioning strategies
-   * Compression techniques
-   * Handling hot/cold data
+   * Lựa chọn định dạng lưu trữ
+   * Chiến lược phân vùng
+   * Kỹ thuật nén
+   * Xử lý dữ liệu nóng/lạnh
 
-5. **Lessons on System Integration**
+5. **Bài học về Tích hợp hệ thống**
 
    * Service discovery
-   * Error handling
-   * Circuit breaker pattern
-   * Load balancing
+   * Xử lý lỗi
+   * Mẫu circuit breaker
+   * Cân bằng tải
 
-6. **Lessons on Performance Optimization**
+6. **Bài học về Tối ưu hiệu năng**
 
-   * Caching strategies
-   * Query optimization
-   * Resource allocation
-   * Bottleneck identification
+   * Chiến lược cache
+   * Tối ưu truy vấn
+   * Phân bổ tài nguyên
+   * Xác định điểm nghẽn
 
-7. **Lessons on Monitoring & Debugging**
+7. **Bài học về Giám sát & Gỡ lỗi**
 
-   * Metrics collection
-   * Alert configuration
-   * Log aggregation
-   * Root cause analysis
+   * Thu thập metrics
+   * Cấu hình cảnh báo
+   * Tổng hợp log
+   * Phân tích nguyên nhân gốc
 
-8. **Lessons on Scaling**
+8. **Bài học về Mở rộng (Scaling)**
 
-   * Horizontal vs vertical scaling
-   * Auto-scaling policies
-   * Resource planning
-   * Cost optimization
+   * Mở rộng ngang và dọc
+   * Chính sách auto-scaling
+   * Kế hoạch tài nguyên
+   * Tối ưu chi phí
 
-9. **Lessons on Data Quality & Testing**
+9. **Bài học về Chất lượng dữ liệu & Kiểm thử**
 
-   * Data validation
-   * Unit testing
-   * Integration testing
-   * Performance testing
+   * Kiểm tra dữ liệu
+   * Kiểm thử đơn vị
+   * Kiểm thử tích hợp
+   * Kiểm thử hiệu năng
 
-10. **Lessons on Security & Governance**
+10. **Bài học về Bảo mật & Quản trị**
 
-    * Access control
-    * Data encryption
-    * Audit logging
-    * Compliance requirements
+    * Kiểm soát truy cập
+    * Mã hóa dữ liệu
+    * Audit log
+    * Yêu cầu tuân thủ
 
-11. **Lessons on Fault Tolerance**
+11. **Bài học về Chịu lỗi**
 
-    * Failure recovery
-    * Data replication
-    * Backup strategies
-    * Disaster recovery
+    * Phục hồi sau sự cố
+    * Nhân bản dữ liệu
+    * Chiến lược backup
+    * Khôi phục thảm họa
 
 

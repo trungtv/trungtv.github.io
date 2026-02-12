@@ -131,4 +131,5 @@ The capstone has **3 submission phases** and **1 defense session**. Complete the
 ## Learning materials
 
 - **Course materials:** [Google Drive folder](https://drive.google.com/drive/folders/0B8a305L6HNbwblZCQjNuLUxaNjg?usp=sharing)
+- **Lab & exercises (GitHub):** [IT3290_database_lab](https://github.com/trungtv/IT3290_database_lab) — databases, exercises, lecture outlines, notebook-labs
 - **Reference:** Garcia-Molina, H., Ullman, J. D., Widom, J. *Database Systems: The Complete Book* (2nd ed.). Prentice Hall, 2008.

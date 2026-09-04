@@ -15,13 +15,3 @@
 <!-- For all browsers -->
 <link rel="stylesheet" href="{{ base_path }}/assets/css/main.css">
 <link rel="stylesheet" href="{{ base_path }}/assets/css/no-intro.css">
-
-<!-- Native prefetch for in-site nav (no SPA layer; avoids Turbo preview flicker) -->
-<script type="speculationrules">
-{
-  "prefetch": [{
-    "where": { "href_matches": "/*" },
-    "eagerness": "moderate"
-  }]
-}
-</script>

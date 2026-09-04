@@ -1,11 +1,11 @@
 ---
-published: true
-layout: post
-categories:
+title: 'Nền tảng gán nhãn dữ liệu cộng đồng'
+date: 2023-04-01
+permalink: /posts/2023/04/topic-nen-tang-gan-nhan-du-lieu-cong-dong/
+tags:
   - Project topics for students
-share: true
-title: Nền tảng gán nhãn dữ liệu cộng đồng
 ---
+
 ## Trạng thái: CLOSED
 
 ## Mục tiêu

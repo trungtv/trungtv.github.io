@@ -1,10 +1,11 @@
 ---
-published: true
-layout: post
-categories:
+title: 'Pair trading'
+date: 2023-04-01
+permalink: /posts/2023/04/pair-trading/
+tags:
   - Project topics for students
-share: true
 ---
+
 ## Introduction
 A pairs trade is a trading strategy that involves matching a long position with a short position in two stocks with a high correlation.
 

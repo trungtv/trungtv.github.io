@@ -136,52 +136,101 @@ function redrawPlotly() {
 
 /* ==========================================================================
    Actions that should occur when the page has been fully loaded
+   (also re-run on Turbo Drive navigations via turbo:load)
    ========================================================================== */
 
-$(document).ready(function () {
-  // SCSS SETTINGS - These should be the same as the settings in the relevant files
-  const scssLarge = 925;          // pixels, from /_sass/_themes.scss
-  const scssMastheadHeight = 70;  // pixels, from the current theme (e.g., /_sass/theme/_default.scss)
+const scssLarge = 925; // pixels, from /_sass/_themes.scss
 
-  // If the user hasn't chosen a theme, follow the OS preference
-  setTheme();
-  window.matchMedia('(prefers-color-scheme: dark)')
-        .addEventListener("change", (e) => {
-          if (!localStorage.getItem("theme")) {
-            setTheme(e.matches ? "dark" : "light");
-          }
-        });
+function syncNavSelected() {
+  const path = window.location.pathname;
+  $("#site-nav .masthead__menu-item").each(function () {
+    const $li = $(this);
+    const href = $li.children("a").attr("href");
+    if (!href) {
+      return;
+    }
 
-  // Enable the theme toggle
-  $('#theme-toggle').on('click', toggleTheme);
-
-  // Enable the sticky footer
-  var bumpIt = function () {
-    $("body").css("padding-bottom", "0");
-    $("body").css("margin-bottom", $(".page__footer").outerHeight(true));
-  }
-  $(window).resize(function () {
-    didResize = true;
+    let selected = false;
+    if ($li.hasClass("masthead__menu-item--lg")) {
+      selected = path === "/" || path === "/index.html";
+    } else {
+      try {
+        const linkPath = new URL(href, window.location.origin).pathname;
+        selected = linkPath !== "/" && path.indexOf(linkPath) !== -1;
+      } catch (e) {
+        selected = false;
+      }
+    }
+    $li.toggleClass("selected", selected);
   });
-  setInterval(function () {
-    if (didResize) {
-      didResize = false;
-      bumpIt();
-    }}, 250);
-  var didResize = false;
-  bumpIt();
+}
 
-  // Follow menu drop down
-  $(".author__urls-wrapper button").on("click", function () {
+function bumpFooter() {
+  $("body").css("padding-bottom", "0");
+  $("body").css("margin-bottom", $(".page__footer").outerHeight(true));
+}
+
+function typesetMath() {
+  if (window.MathJax && typeof window.MathJax.typesetPromise === "function") {
+    window.MathJax.typesetPromise();
+  }
+}
+
+function initPage() {
+  setTheme();
+  syncNavSelected();
+  bumpFooter();
+  if (typeof updateNav === "function") {
+    updateNav();
+  }
+  typesetMath();
+}
+
+let pageChromeInitialized = false;
+
+function initPageChrome() {
+  if (pageChromeInitialized) {
+    return;
+  }
+  pageChromeInitialized = true;
+
+  window.matchMedia("(prefers-color-scheme: dark)")
+    .addEventListener("change", (e) => {
+      if (!localStorage.getItem("theme")) {
+        setTheme(e.matches ? "dark" : "light");
+      }
+    });
+
+  // Delegation so handlers survive Turbo body swaps
+  $(document).on("click", "#theme-toggle", function (e) {
+    e.preventDefault();
+    toggleTheme();
+  });
+
+  $(document).on("click", ".author__urls-wrapper button", function () {
     $(".author__urls").fadeToggle("fast", function () { });
     $(".author__urls-wrapper button").toggleClass("open");
   });
 
-  // Restore the follow menu if toggled on a window resize
-  jQuery(window).on('resize', function () {
-    if ($('.author__urls.social-icons').css('display') == 'none' && $(window).width() >= scssLarge) {
-      $(".author__urls").css('display', 'block')
+  let didResize = false;
+  $(window).on("resize.pageChrome", function () {
+    didResize = true;
+    if ($(".author__urls.social-icons").css("display") == "none" && $(window).width() >= scssLarge) {
+      $(".author__urls").css("display", "block");
     }
   });
+  setInterval(function () {
+    if (didResize) {
+      didResize = false;
+      bumpFooter();
+    }
+  }, 250);
+}
 
+initPageChrome();
+initPage();
+
+document.addEventListener("turbo:load", function () {
+  initPageChrome();
+  initPage();
 });

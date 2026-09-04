@@ -62,30 +62,6 @@
 
 .sidebar__right {
   margin-bottom: 1em;
-
-  @include breakpoint($large) {
-    position: relative;
-    float: right;
-    width: $right-sidebar-width-narrow;
-    margin-left: span(0.5 of 12);
-    z-index: 10;
-  }
-
-  @include breakpoint($x-large) {
-    width: $right-sidebar-width;
-  }
-
-  &.sticky {
-    @include breakpoint($large) {
-      clear: both;
-      position: -webkit-sticky;
-      position: sticky;
-      top: 5.5em;
-      float: right;
-      max-height: calc(100vh - 6.5em);
-      overflow-y: auto;
-    }
-  }
 }
 
 

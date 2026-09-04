@@ -30,6 +30,62 @@
       @include full();
     }
   }
+
+  /* TOC: right column when wide enough; otherwise static block under title */
+  &.page--toc {
+    @include breakpoint($x-large) {
+      /* reclaim the empty suffix as the TOC column */
+      padding-right: 0;
+      margin-right: 0;
+    }
+
+    .sidebar__right {
+      float: none;
+      width: auto;
+      margin: 0 0 1.5em;
+      z-index: 1;
+
+      &.sticky {
+        position: static;
+        max-height: none;
+        overflow: visible;
+      }
+    }
+
+    @include breakpoint($x-large) {
+      .page__inner-wrap {
+        display: grid;
+        grid-template-columns: minmax(0, 1fr) $right-sidebar-width;
+        column-gap: 1.5rem;
+        align-items: start;
+
+        > header {
+          grid-column: 1;
+        }
+
+        > .sidebar__right {
+          grid-column: 2;
+          grid-row: 1 / -1;
+          width: 100%;
+          margin: 0;
+        }
+
+        > .sidebar__right.sticky {
+          position: sticky;
+          top: 5.5em;
+          max-height: calc(100vh - 6.5em);
+          overflow-y: auto;
+        }
+
+        > .page__content,
+        > .page__meta,
+        > .page__share,
+        > .pagination {
+          grid-column: 1;
+        }
+      }
+    }
+  }
 }
 
 .page__title {

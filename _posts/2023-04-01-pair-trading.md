@@ -5,6 +5,8 @@ permalink: /posts/2023/04/pair-trading/
 tags:
   - Project topics for students
 topic_status: open
+summary: "Nghiên cứu thuật toán pair trading và áp dụng trên thị trường chứng khoán Việt Nam."
+read_time: false
 ---
 
 ## Introduction

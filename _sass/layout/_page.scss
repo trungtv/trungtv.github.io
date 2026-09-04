@@ -460,6 +460,7 @@
 /* Status badges for Topics / Teaching */
 .status-badge {
   display: inline-block;
+  flex-shrink: 0;
   font-size: $type-size-7;
   font-weight: 700;
   letter-spacing: 0.04em;
@@ -479,6 +480,118 @@
     color: var(--global-text-color-light);
     opacity: 0.95;
   }
+}
+
+/* Topics listing */
+.topics {
+  max-width: 42rem;
+}
+
+.topics__lede {
+  margin: 0 0 2rem;
+  color: var(--global-text-color);
+  line-height: 1.6;
+
+  a {
+    text-decoration: underline;
+  }
+}
+
+.topics__section {
+  margin-bottom: 2.5rem;
+}
+
+.topics__section--closed {
+  .topics__item-title {
+    color: var(--global-text-color);
+  }
+
+  .topics__item-summary {
+    color: var(--global-text-color-light);
+  }
+
+  .topics__link:hover .topics__item-title {
+    color: var(--global-link-color-hover);
+  }
+}
+
+.topics__section-header {
+  display: flex;
+  align-items: baseline;
+  gap: 0.75rem;
+  margin: 0 0 0.75rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid var(--global-border-color);
+}
+
+.topics__section-title {
+  margin: 0;
+  font-size: $type-size-5;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  color: var(--global-text-color);
+}
+
+.topics__count {
+  font-size: $type-size-6;
+  color: var(--global-text-color-light);
+}
+
+.topics__list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.topics__item {
+  margin: 0;
+  border-bottom: 1px solid var(--global-border-color);
+
+  &:last-child {
+    border-bottom: 0;
+  }
+}
+
+.topics__link {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 1rem 0;
+  color: inherit;
+  text-decoration: none !important;
+
+  &:hover .topics__item-title {
+    color: var(--global-link-color);
+    text-decoration: underline;
+  }
+}
+
+.topics__item-main {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+  min-width: 0;
+}
+
+.topics__item-title {
+  font-size: $type-size-4;
+  font-weight: 600;
+  line-height: 1.3;
+  color: var(--global-text-color);
+}
+
+.topics__item-summary {
+  font-size: $type-size-6;
+  line-height: 1.5;
+  color: var(--global-text-color-light);
+}
+
+.topics__empty {
+  margin: 0.75rem 0 0;
+  color: var(--global-text-color-light);
+  font-style: italic;
 }
 
 .page__related-title {

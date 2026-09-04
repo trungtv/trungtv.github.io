@@ -5,6 +5,8 @@ permalink: /posts/2023/04/topic-document-understanding-ai/
 tags:
   - Project topics for students
 topic_status: open
+summary: "Hiểu và bóc tách văn bản bán cấu trúc (hợp đồng, báo cáo, CV, hồ sơ) bằng AI đa thể thức."
+read_time: false
 ---
 
 ## Mục tiêu

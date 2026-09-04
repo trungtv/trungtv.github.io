@@ -5,6 +5,8 @@ permalink: /posts/2023/04/topic-time-series-analysis/
 tags:
   - Project topics for students
 topic_status: open
+summary: "Dự báo xu hướng giá, phân loại thị trường và nhận dạng pattern giao dịch trên dữ liệu chuỗi thời gian."
+read_time: false
 ---
 
 ## Overview

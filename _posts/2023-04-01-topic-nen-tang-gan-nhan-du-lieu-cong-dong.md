@@ -5,9 +5,9 @@ permalink: /posts/2023/04/topic-nen-tang-gan-nhan-du-lieu-cong-dong/
 tags:
   - Project topics for students
 topic_status: closed
+summary: "Xây dựng nền tảng gán nhãn cộng đồng với kiểm soát chất lượng cho dữ liệu học máy."
+read_time: false
 ---
-
-## Trạng thái: CLOSED
 
 ## Mục tiêu
 

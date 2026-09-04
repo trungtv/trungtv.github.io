@@ -10,23 +10,47 @@ redirect_from:
 
 {% include base_path %}
 
-<p>Đề tài đồ án / project cho sinh viên. Mục <strong>OPEN</strong> đang nhận sinh viên; <strong>CLOSED</strong> đã kết thúc hoặc tạm dừng.</p>
-
 {% assign open_topics = site.posts | where: "topic_status", "open" %}
 {% assign closed_topics = site.posts | where: "topic_status", "closed" %}
 
-<h2 id="open" class="archive__subtitle">OPEN</h2>
-{% for post in open_topics %}
-  {% include archive-single.html %}
-{% endfor %}
-{% if open_topics.size == 0 %}
-<p><em>Hiện không có đề tài OPEN.</em></p>
-{% endif %}
+<div class="topics">
+  <p class="topics__lede">
+    Đề tài đồ án / project cho sinh viên.
+    <a href="#open">Open</a> đang nhận sinh viên;
+    <a href="#closed">Closed</a> đã kết thúc hoặc tạm dừng.
+  </p>
 
-<h2 id="closed" class="archive__subtitle">CLOSED</h2>
-{% for post in closed_topics %}
-  {% include archive-single.html %}
-{% endfor %}
-{% if closed_topics.size == 0 %}
-<p><em>Không có đề tài CLOSED.</em></p>
-{% endif %}
+  <section class="topics__section" id="open" aria-labelledby="topics-open-heading">
+    <header class="topics__section-header">
+      <h2 id="topics-open-heading" class="topics__section-title">Open</h2>
+      <span class="topics__count">{{ open_topics.size }}</span>
+    </header>
+
+    {% if open_topics.size > 0 %}
+    <ul class="topics__list">
+      {% for post in open_topics %}
+        {% include topic-list-item.html %}
+      {% endfor %}
+    </ul>
+    {% else %}
+    <p class="topics__empty">Hiện không có đề tài open.</p>
+    {% endif %}
+  </section>
+
+  <section class="topics__section topics__section--closed" id="closed" aria-labelledby="topics-closed-heading">
+    <header class="topics__section-header">
+      <h2 id="topics-closed-heading" class="topics__section-title">Closed</h2>
+      <span class="topics__count">{{ closed_topics.size }}</span>
+    </header>
+
+    {% if closed_topics.size > 0 %}
+    <ul class="topics__list">
+      {% for post in closed_topics %}
+        {% include topic-list-item.html %}
+      {% endfor %}
+    </ul>
+    {% else %}
+    <p class="topics__empty">Không có đề tài closed.</p>
+    {% endif %}
+  </section>
+</div>

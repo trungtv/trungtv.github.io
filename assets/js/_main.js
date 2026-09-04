@@ -141,28 +141,58 @@ function redrawPlotly() {
 
 const scssLarge = 925; // pixels, from /_sass/_themes.scss
 
+function normalizePath(pathname) {
+  if (!pathname) {
+    return "/";
+  }
+  const trimmed = pathname.replace(/\/+$/, "");
+  return trimmed === "" ? "/" : trimmed;
+}
+
 function syncNavSelected() {
-  const path = window.location.pathname;
+  const path = normalizePath(window.location.pathname);
+  let bestMatch = null;
+  let bestLength = -1;
+
   $("#site-nav .masthead__menu-item").each(function () {
     const $li = $(this);
-    const href = $li.children("a").attr("href");
-    if (!href) {
+    if ($li.attr("id") === "theme-toggle") {
+      $li.removeClass("selected");
       return;
     }
 
-    let selected = false;
-    if ($li.hasClass("masthead__menu-item--lg")) {
-      selected = path === "/" || path === "/index.html";
-    } else {
-      try {
-        const linkPath = new URL(href, window.location.origin).pathname;
-        selected = linkPath !== "/" && path.indexOf(linkPath) !== -1;
-      } catch (e) {
-        selected = false;
-      }
+    const href = $li.find("a[href]").first().attr("href");
+    if (!href) {
+      $li.removeClass("selected");
+      return;
     }
-    $li.toggleClass("selected", selected);
+
+    let linkPath;
+    try {
+      linkPath = normalizePath(new URL(href, window.location.origin).pathname);
+    } catch (e) {
+      $li.removeClass("selected");
+      return;
+    }
+
+    let matches = false;
+    if ($li.hasClass("masthead__menu-item--lg")) {
+      matches = path === "/";
+    } else if (linkPath !== "/") {
+      // Exact section root, or a nested page under that section
+      matches = path === linkPath || path.startsWith(linkPath + "/");
+    }
+
+    $li.removeClass("selected");
+    if (matches && linkPath.length > bestLength) {
+      bestMatch = $li;
+      bestLength = linkPath.length;
+    }
   });
+
+  if (bestMatch) {
+    bestMatch.addClass("selected");
+  }
 }
 
 function bumpFooter() {
@@ -221,6 +251,16 @@ function initPageChrome() {
     toggleTheme();
   });
 
+  // Optimistic highlight on nav click (permanent masthead keeps old selected otherwise)
+  $(document).on("click", "#site-nav .masthead__menu-item a[href]", function () {
+    const $li = $(this).closest(".masthead__menu-item");
+    if ($li.attr("id") === "theme-toggle") {
+      return;
+    }
+    $("#site-nav .masthead__menu-item").removeClass("selected");
+    $li.addClass("selected");
+  });
+
   $(document).on("click", ".author__urls-wrapper button", function () {
     $(".author__urls").fadeToggle("fast", function () { });
     $(".author__urls-wrapper button").toggleClass("open");
@@ -252,10 +292,17 @@ document.addEventListener("turbo:load", function () {
   initPage();
 });
 
-// Keep scroll jump soft: snap to top after render without animated thrash
 document.addEventListener("turbo:render", function () {
+  syncNavSelected();
+});
+
+// Keep scroll jump soft: snap to top after render without animated thrash
+document.addEventListener("turbo:before-render", function () {
   if ("scrollRestoration" in history) {
     history.scrollRestoration = "manual";
   }
+});
+
+document.addEventListener("turbo:load", function () {
   window.scrollTo(0, 0);
 });

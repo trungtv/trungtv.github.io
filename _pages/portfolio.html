@@ -7,8 +7,100 @@ author_profile: true
 
 {% include base_path %}
 
+<p class="archive__item-excerpt">Public GitHub repositories (excluding forks).</p>
 
-{% for post in site.portfolio %}
-  {% include archive-single.html %}
-{% endfor %}
+<div id="github-repos" aria-live="polite">
+  <p>Loading repositories…</p>
+</div>
 
+<script>
+(function () {
+  var username = {{ site.author.github | jsonify }};
+  var container = document.getElementById('github-repos');
+  if (!username || !container) return;
+
+  function escapeHtml(s) {
+    return String(s == null ? '' : s)
+      .replace(/&/g, '&amp;')
+      .replace(/</g, '&lt;')
+      .replace(/>/g, '&gt;')
+      .replace(/"/g, '&quot;');
+  }
+
+  function fetchPage(page) {
+    return fetch(
+      'https://api.github.com/users/' + encodeURIComponent(username) +
+      '/repos?type=owner&sort=updated&per_page=100&page=' + page,
+      { headers: { 'Accept': 'application/vnd.github+json' } }
+    ).then(function (res) {
+      if (!res.ok) throw new Error('GitHub API ' + res.status);
+      var link = res.headers.get('Link') || '';
+      var hasNext = /rel="next"/.test(link);
+      return res.json().then(function (repos) {
+        return { repos: repos, hasNext: hasNext };
+      });
+    });
+  }
+
+  function fetchAll() {
+    var all = [];
+    var page = 1;
+    function next() {
+      return fetchPage(page).then(function (result) {
+        all = all.concat(result.repos);
+        if (result.hasNext) {
+          page += 1;
+          return next();
+        }
+        return all;
+      });
+    }
+    return next();
+  }
+
+  fetchAll()
+    .then(function (repos) {
+      var owned = repos.filter(function (r) { return !r.fork; });
+      owned.sort(function (a, b) {
+        if (b.stargazers_count !== a.stargazers_count) {
+          return b.stargazers_count - a.stargazers_count;
+        }
+        return new Date(b.updated_at) - new Date(a.updated_at);
+      });
+
+      if (!owned.length) {
+        container.innerHTML = '<p>No public non-fork repositories found.</p>';
+        return;
+      }
+
+      var html = owned.map(function (r) {
+        var desc = r.description
+          ? '<p class="archive__item-excerpt" itemprop="description">' + escapeHtml(r.description) + '</p>'
+          : '';
+        var meta = [];
+        if (r.language) meta.push(escapeHtml(r.language));
+        meta.push(r.stargazers_count + '★');
+        if (r.homepage) {
+          meta.push('<a href="' + escapeHtml(r.homepage) + '">' + escapeHtml(r.homepage.replace(/^https?:\/\//, '')) + '</a>');
+        }
+        return (
+          '<div class="list__item">' +
+            '<article class="archive__item" itemscope itemtype="http://schema.org/CreativeWork">' +
+              '<h2 class="archive__item-title" itemprop="headline">' +
+                '<a href="' + escapeHtml(r.html_url) + '" rel="noopener">' + escapeHtml(r.name) + '</a>' +
+              '</h2>' +
+              '<p class="page__meta">' + meta.join(' · ') + '</p>' +
+              desc +
+            '</article>' +
+          '</div>'
+        );
+      }).join('');
+
+      container.innerHTML = html;
+    })
+    .catch(function (err) {
+      container.innerHTML = '<p>Could not load repositories from GitHub.</p>';
+      console.error(err);
+    });
+})();
+</script>

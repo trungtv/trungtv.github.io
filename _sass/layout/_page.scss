@@ -31,33 +31,31 @@
     }
   }
 
-  /* TOC: right column when wide enough; otherwise static block under title */
+  /* TOC: right column when the left author sidebar is already shown;
+     below that, TOC stays a static block under the title. */
   &.page--toc {
-    @include breakpoint($x-large) {
-      /* reclaim the empty suffix as the TOC column */
-      padding-right: 0;
-      margin-right: 0;
-    }
+    @include breakpoint($large) {
+      /* reclaim Susy suffix(2 of 12) — that empty strip is the TOC column */
+      padding-right: 0 !important;
+      margin-right: 0 !important;
 
-    .sidebar__right {
-      float: none;
-      width: auto;
-      margin: 0 0 1.5em;
-      z-index: 1;
-
-      &.sticky {
-        position: static;
-        max-height: none;
-        overflow: visible;
-      }
-    }
-
-    @include breakpoint($x-large) {
       .page__inner-wrap {
         display: grid;
-        grid-template-columns: minmax(0, 1fr) $right-sidebar-width;
-        column-gap: 1.5rem;
+        grid-template-columns: minmax(0, 1fr) minmax(12rem, $right-sidebar-width);
+        column-gap: 1.25rem;
         align-items: start;
+        /* cancel Susy full()/float so grid children stay in their tracks */
+        float: none !important;
+        width: auto !important;
+        clear: none !important;
+
+        > * {
+          float: none !important;
+          width: auto !important;
+          max-width: 100%;
+          clear: none !important;
+          min-width: 0;
+        }
 
         > header {
           grid-column: 1;
@@ -66,12 +64,13 @@
         > .sidebar__right {
           grid-column: 2;
           grid-row: 1 / -1;
-          width: 100%;
+          width: 100% !important;
           margin: 0;
+          justify-self: stretch;
         }
 
         > .sidebar__right.sticky {
-          position: sticky;
+          position: sticky !important;
           top: 5.5em;
           max-height: calc(100vh - 6.5em);
           overflow-y: auto;
@@ -83,6 +82,20 @@
         > .pagination {
           grid-column: 1;
         }
+      }
+    }
+
+    .sidebar__right {
+      float: none !important;
+      width: auto;
+      margin: 0 0 1.5em;
+      z-index: 1;
+
+      &.sticky {
+        position: static !important;
+        top: auto;
+        max-height: none;
+        overflow: visible;
       }
     }
   }

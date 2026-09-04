@@ -136,175 +136,54 @@ function redrawPlotly() {
 
 /* ==========================================================================
    Actions that should occur when the page has been fully loaded
-   (also re-run on Turbo Drive navigations via turbo:load)
    ========================================================================== */
 
-const scssLarge = 925; // pixels, from /_sass/_themes.scss
+$(document).ready(function () {
+  // SCSS SETTINGS - These should be the same as the settings in the relevant files
+  const scssLarge = 925;          // pixels, from /_sass/_themes.scss
 
-function normalizePath(pathname) {
-  if (!pathname) {
-    return "/";
-  }
-  const trimmed = pathname.replace(/\/+$/, "");
-  return trimmed === "" ? "/" : trimmed;
-}
-
-function syncNavSelected() {
-  const path = normalizePath(window.location.pathname);
-  let bestMatch = null;
-  let bestLength = -1;
-
-  $("#site-nav .masthead__menu-item").each(function () {
-    const $li = $(this);
-    if ($li.attr("id") === "theme-toggle") {
-      $li.removeClass("selected");
-      return;
-    }
-
-    const href = $li.find("a[href]").first().attr("href");
-    if (!href) {
-      $li.removeClass("selected");
-      return;
-    }
-
-    let linkPath;
-    try {
-      linkPath = normalizePath(new URL(href, window.location.origin).pathname);
-    } catch (e) {
-      $li.removeClass("selected");
-      return;
-    }
-
-    let matches = false;
-    if ($li.hasClass("masthead__menu-item--lg")) {
-      matches = path === "/";
-    } else if (linkPath !== "/") {
-      // Exact section root, or a nested page under that section
-      matches = path === linkPath || path.startsWith(linkPath + "/");
-    }
-
-    $li.removeClass("selected");
-    if (matches && linkPath.length > bestLength) {
-      bestMatch = $li;
-      bestLength = linkPath.length;
-    }
-  });
-
-  if (bestMatch) {
-    bestMatch.addClass("selected");
-  }
-}
-
-function bumpFooter() {
-  const footer = document.querySelector(".page__footer");
-  if (!footer) {
-    return;
-  }
-  const height = footer.offsetHeight;
-  // Avoid layout thrash when value is unchanged
-  if (document.body.dataset.footerHeight === String(height)) {
-    return;
-  }
-  document.body.dataset.footerHeight = String(height);
-  document.body.style.paddingBottom = "0";
-  document.body.style.marginBottom = height + "px";
-}
-
-function typesetMath() {
-  if (window.MathJax && typeof window.MathJax.typesetPromise === "function") {
-    window.MathJax.typesetPromise();
-  }
-}
-
-function initPage() {
+  // If the user hasn't chosen a theme, follow the OS preference
   setTheme();
-  syncNavSelected();
-  typesetMath();
+  window.matchMedia('(prefers-color-scheme: dark)')
+        .addEventListener("change", (e) => {
+          if (!localStorage.getItem("theme")) {
+            setTheme(e.matches ? "dark" : "light");
+          }
+        });
 
-  // Defer layout measurements to after paint to reduce jank
-  requestAnimationFrame(function () {
-    bumpFooter();
-    if (typeof resetGreedyNav === "function") {
-      resetGreedyNav();
-    } else if (typeof updateNav === "function") {
-      updateNav();
-    }
-  });
-}
-
-let pageChromeInitialized = false;
-
-function initPageChrome() {
-  if (pageChromeInitialized) {
-    return;
-  }
-  pageChromeInitialized = true;
-
-  window.matchMedia("(prefers-color-scheme: dark)")
-    .addEventListener("change", (e) => {
-      if (!localStorage.getItem("theme")) {
-        setTheme(e.matches ? "dark" : "light");
-      }
-    });
-
-  // Delegation so handlers survive Turbo body swaps
-  $(document).on("click", "#theme-toggle", function (e) {
+  // Enable the theme toggle
+  $('#theme-toggle').on('click', function (e) {
     e.preventDefault();
     toggleTheme();
   });
 
-  // Optimistic highlight on nav click (permanent masthead keeps old selected otherwise)
-  $(document).on("click", "#site-nav .masthead__menu-item a[href]", function () {
-    const $li = $(this).closest(".masthead__menu-item");
-    if ($li.attr("id") === "theme-toggle") {
-      return;
-    }
-    $("#site-nav .masthead__menu-item").removeClass("selected");
-    $li.addClass("selected");
-  });
-
-  $(document).on("click", ".author__urls-wrapper button", function () {
-    $(".author__urls").fadeToggle("fast", function () { });
-    $(".author__urls-wrapper button").toggleClass("open");
-  });
-
-  let didResize = false;
-  $(window).on("resize.pageChrome", function () {
+  // Enable the sticky footer
+  var bumpIt = function () {
+    $("body").css("padding-bottom", "0");
+    $("body").css("margin-bottom", $(".page__footer").outerHeight(true));
+  }
+  $(window).resize(function () {
     didResize = true;
-    if ($(".author__urls.social-icons").css("display") == "none" && $(window).width() >= scssLarge) {
-      $(".author__urls").css("display", "block");
-    }
   });
   setInterval(function () {
     if (didResize) {
       didResize = false;
-      bumpFooter();
-      if (typeof updateNav === "function") {
-        updateNav();
-      }
+      bumpIt();
+    }}, 250);
+  var didResize = false;
+  bumpIt();
+
+  // Follow menu drop down
+  $(".author__urls-wrapper button").on("click", function () {
+    $(".author__urls").fadeToggle("fast", function () { });
+    $(".author__urls-wrapper button").toggleClass("open");
+  });
+
+  // Restore the follow menu if toggled on a window resize
+  jQuery(window).on('resize', function () {
+    if ($('.author__urls.social-icons').css('display') == 'none' && $(window).width() >= scssLarge) {
+      $(".author__urls").css('display', 'block')
     }
-  }, 250);
-}
+  });
 
-initPageChrome();
-initPage();
-
-document.addEventListener("turbo:load", function () {
-  initPageChrome();
-  initPage();
-});
-
-document.addEventListener("turbo:render", function () {
-  syncNavSelected();
-});
-
-// Keep scroll jump soft: snap to top after render without animated thrash
-document.addEventListener("turbo:before-render", function () {
-  if ("scrollRestoration" in history) {
-    history.scrollRestoration = "manual";
-  }
-});
-
-document.addEventListener("turbo:load", function () {
-  window.scrollTo(0, 0);
 });

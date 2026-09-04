@@ -8,13 +8,19 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<meta name="view-transition" content="same-origin">
-<meta name="turbo-prefetch" content="true">
-
 <script>
   document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
 </script>
 
 <!-- For all browsers -->
 <link rel="stylesheet" href="{{ base_path }}/assets/css/main.css">
-<link rel="stylesheet" href="{{ base_path }}/assets/css/turbo.css">
+
+<!-- Native prefetch for in-site nav (no SPA layer; avoids Turbo preview flicker) -->
+<script type="speculationrules">
+{
+  "prefetch": [{
+    "where": { "href_matches": "/*" },
+    "eagerness": "moderate"
+  }]
+}
+</script>

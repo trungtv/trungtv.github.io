@@ -3,37 +3,17 @@
 *
 * http://codepen.io/lukejacksonn/pen/PwmwWV
 *
-* Refs are refreshed on each update so Turbo body/masthead swaps stay valid.
 */
 
-var $nav, $btn, $vlinks, $vlinks_persist_tail, $hlinks;
+var $nav = $('#site-nav');
+var $btn = $('#site-nav button');
+var $vlinks = $('#site-nav .visible-links');
+var $vlinks_persist_tail = $vlinks.children("*.persist.tail");
+var $hlinks = $('#site-nav .hidden-links');
+
 var breaks = [];
 
-function refreshNavRefs() {
-  $nav = $('#site-nav');
-  $btn = $('#site-nav > button');
-  $vlinks = $('#site-nav .visible-links');
-  $vlinks_persist_tail = $vlinks.children("*.persist.tail");
-  $hlinks = $('#site-nav .hidden-links');
-}
-
-function resetGreedyNav() {
-  breaks = [];
-  refreshNavRefs();
-  if ($hlinks && $hlinks.length) {
-    // Put any leftover hidden items back before measuring
-    $hlinks.children().appendTo($vlinks);
-    $btn.addClass('hidden').removeClass('close');
-    $hlinks.addClass('hidden');
-  }
-  updateNav();
-}
-
 function updateNav() {
-  refreshNavRefs();
-  if (!$nav.length || !$vlinks.length) {
-    return;
-  }
 
   var availableSpace = $btn.hasClass('hidden') ? $nav.width() : $nav.width() - $btn.width() - 30;
 
@@ -98,11 +78,9 @@ screen.orientation.addEventListener("change", function () {
   updateNav();
 });
 
-$(document).on('click', '#site-nav > button', function () {
-  refreshNavRefs();
+$btn.on('click', function () {
   $hlinks.toggleClass('hidden');
   $(this).toggleClass('close');
 });
 
-refreshNavRefs();
 updateNav();

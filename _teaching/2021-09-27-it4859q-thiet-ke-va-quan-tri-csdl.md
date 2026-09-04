@@ -6,6 +6,7 @@ permalink: /teaching/it4859q-thiet-ke-va-quan-tri-csdl
 venue: "SOICT, HUST"
 date: 2021-09-27
 location: "Hanoi, Vietnam"
+status: active
 ---
 
 ## Course organization 

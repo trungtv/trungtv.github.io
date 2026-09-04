@@ -6,6 +6,7 @@ permalink: /teaching/it3290e-database-lab
 venue: "SOICT, HUST"
 date: 2020-03-07
 location: "Hanoi, Vietnam"
+status: active
 ---
 
 ## IT3290E Database Lab  

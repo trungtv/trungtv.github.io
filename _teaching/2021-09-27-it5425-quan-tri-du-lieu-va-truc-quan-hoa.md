@@ -6,6 +6,7 @@ permalink: /teaching/it5425-quan-tri-du-lieu-va-truc-quan-hoa
 venue: "SOICT, HUST"
 date: 2021-09-27
 location: "Hanoi, Vietnam"
+status: active
 ---
 
 ## IT5425 Data management and visualization  

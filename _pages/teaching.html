@@ -7,6 +7,25 @@ author_profile: true
 
 {% include base_path %}
 
-{% for post in site.teaching reversed %}
+{% assign courses = site.teaching | where: "type", "Course" | where: "status", "active" | reverse %}
+{% assign guidelines = site.teaching | where: "type", "Guideline" | where: "status", "active" | reverse %}
+{% assign archived = site.teaching | where: "status", "archived" | reverse %}
+
+<p>Tài liệu môn học và hướng dẫn làm project / đồ án. Phần <strong>Archived</strong> giữ lại để tham khảo, không còn là lớp đang dạy.</p>
+
+<h2 id="courses" class="archive__subtitle">Courses</h2>
+{% for post in courses %}
   {% include archive-single.html %}
 {% endfor %}
+
+<h2 id="guidelines" class="archive__subtitle">Guidelines</h2>
+{% for post in guidelines %}
+  {% include archive-single.html %}
+{% endfor %}
+
+{% if archived.size > 0 %}
+<h2 id="archived" class="archive__subtitle">Archived</h2>
+{% for post in archived %}
+  {% include archive-single.html %}
+{% endfor %}
+{% endif %}

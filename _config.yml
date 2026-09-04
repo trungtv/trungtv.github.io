@@ -12,7 +12,7 @@ site_theme               : "default" # The available themes options are "default
 title                    : "Viet-Trung Tran"
 title_separator          : "-"
 name                     : &name "Viet-Trung Tran"
-description              : &description "Academic site of Viet-Trung Tran, SOICT / HUST — teaching, research topics, and guidelines for students."
+description              : &description "Lecturer at SOICT / HUST — large-scale data analytics, NLP, and applied machine learning."
 url                      : https://datalab.vn
 baseurl                  : "" # the subpath of your site, e.g. "/blog"
 repository               : "trungtv/trungtv.github.io"
@@ -25,19 +25,19 @@ author:
   avatar           : "trungtv.jpeg"
   name             : "Viet-Trung Tran"
   pronouns         : # example: "she/her"  
-  bio              : "PhD. School of Information and Communication Technology (SOICT), Hanoi University of Science and Technology (HUST)."
+  bio              : "Lecturer, Department of Computer Science, SOICT / HUST. Large-scale data analytics, NLP, and applied ML."
   location         : "Hanoi, Vietnam"
   employer         : "SOICT, HUST"
-  uri              : # URL
+  uri              : "https://soict.hust.edu.vn/en/ph-d-tran-viet-trung.html"
   email            : "trungtv@soict.hust.edu.vn"
 
   # Academic websites
   academia         : # URL
   arxiv            : # URL
-  googlescholar    : # URL
+  googlescholar    : "https://scholar.google.com/citations?user=wYWRXQ0AAAAJ"
   inspire-hep      : # URL
   impactstory      : # URL
-  orcid            : # URL
+  orcid            : "https://orcid.org/0009-0002-0295-4038"
   semantic         : # URL
   ssrn             : # URL
   pubmed           : # URL

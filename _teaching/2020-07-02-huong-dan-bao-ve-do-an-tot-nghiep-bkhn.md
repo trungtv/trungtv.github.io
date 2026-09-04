@@ -6,6 +6,7 @@ permalink: /teaching/huong-dan-bao-ve-do-an-tot-nghiep-bkhn
 venue: "SOICT, HUST"
 date: 2020-07-02
 location: "Hanoi, Vietnam"
+status: active
 ---
 
 ## Nguồn bài viết:

@@ -4,6 +4,7 @@ date: 2023-04-01
 permalink: /posts/2023/04/pair-trading/
 tags:
   - Project topics for students
+topic_status: open
 ---
 
 ## Introduction

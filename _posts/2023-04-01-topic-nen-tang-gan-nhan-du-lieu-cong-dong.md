@@ -4,6 +4,7 @@ date: 2023-04-01
 permalink: /posts/2023/04/topic-nen-tang-gan-nhan-du-lieu-cong-dong/
 tags:
   - Project topics for students
+topic_status: closed
 ---
 
 ## Trạng thái: CLOSED

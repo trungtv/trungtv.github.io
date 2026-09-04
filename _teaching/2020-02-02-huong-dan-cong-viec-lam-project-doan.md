@@ -6,6 +6,7 @@ permalink: /teaching/huong-dan-cong-viec-lam-project-doan
 venue: "SOICT, HUST"
 date: 2020-02-02
 location: "Hanoi, Vietnam"
+status: active
 ---
 
 0. Join Microsoft Teams và tạo channel riêng cho nhóm theo hướng dẫn của giáo viên.

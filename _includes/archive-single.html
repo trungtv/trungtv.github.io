@@ -39,7 +39,9 @@
     {% endif %}
 
         {% if post.collection == 'teaching' %}
-          <p> {{ post.type }}, <i>{{ post.venue }}</i>, {{ post.date | default: "1900-01-01" | date: "%Y" }} </p>
+          <p> {{ post.type }}, <i>{{ post.venue }}</i>, {{ post.date | default: "1900-01-01" | date: "%Y" }}{% if post.status == "archived" %} · <span class="status-badge status-badge--archived">Archived</span>{% endif %} </p>
+        {% elsif post.topic_status %}
+          <p><span class="status-badge status-badge--{{ post.topic_status }}">{{ post.topic_status | upcase }}</span></p>
         {% elsif post.collection == 'publications' %}
           <p>Published in <i>{{ post.venue }}</i>, {{ post.date | default: "1900-01-01" | date: "%Y" }} </p>
         {% elsif post.date %}

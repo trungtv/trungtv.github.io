@@ -6,6 +6,7 @@ permalink: /teaching/it4931-luu-tru-va-xu-ly-du-lieu-lon
 venue: "SOICT, HUST"
 date: 2020-03-03
 location: "Hanoi, Vietnam"
+status: active
 ---
 
 ## Lịch giảng dạy

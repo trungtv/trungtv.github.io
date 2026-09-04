@@ -6,6 +6,7 @@ permalink: /teaching/it4043e-big-data-storage-and-processing
 venue: "SOICT, HUST"
 date: 2020-03-03
 location: "Hanoi, Vietnam"
+status: active
 ---
 
 ## Teaching Schedule

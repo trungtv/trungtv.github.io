@@ -35,7 +35,9 @@ layout: default
         {% endif %}
         
         {% if page.collection == 'teaching' %}
-          <p> {{ page.type }}, <i>{{ page.venue }}</i>, {{ page.date | default: "1900-01-01" | date: "%Y" }} </p>
+          <p> {{ page.type }}, <i>{{ page.venue }}</i>, {{ page.date | default: "1900-01-01" | date: "%Y" }}{% if page.status == "archived" %} · <span class="status-badge status-badge--archived">Archived</span>{% endif %} </p>
+        {% elsif page.topic_status %}
+          <p><span class="status-badge status-badge--{{ page.topic_status }}">{{ page.topic_status | upcase }}</span></p>
         {% elsif page.venue and page.date %}
           <p>Published in <i>{{ page.venue }}</i>, {{ page.date | default: "1900-01-01" | date: "%Y" }} </p>
         {% elsif page.date %}

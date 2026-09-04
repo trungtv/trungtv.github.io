@@ -6,6 +6,7 @@ permalink: /teaching/it5426-intro-deep-learning
 venue: "SOICT, HUST"
 date: 2020-03-03
 location: "Hanoi, Vietnam"
+status: archived
 ---
 
 ## Tài liệu tham khảo 

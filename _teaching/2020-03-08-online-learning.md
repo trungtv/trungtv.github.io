@@ -6,6 +6,7 @@ permalink: /teaching/online-learning
 venue: "SOICT, HUST"
 date: 2020-03-08
 location: "Hanoi, Vietnam"
+status: archived
 ---
 
 Chào các em, 

@@ -166,8 +166,18 @@ function syncNavSelected() {
 }
 
 function bumpFooter() {
-  $("body").css("padding-bottom", "0");
-  $("body").css("margin-bottom", $(".page__footer").outerHeight(true));
+  const footer = document.querySelector(".page__footer");
+  if (!footer) {
+    return;
+  }
+  const height = footer.offsetHeight;
+  // Avoid layout thrash when value is unchanged
+  if (document.body.dataset.footerHeight === String(height)) {
+    return;
+  }
+  document.body.dataset.footerHeight = String(height);
+  document.body.style.paddingBottom = "0";
+  document.body.style.marginBottom = height + "px";
 }
 
 function typesetMath() {
@@ -179,11 +189,15 @@ function typesetMath() {
 function initPage() {
   setTheme();
   syncNavSelected();
-  bumpFooter();
-  if (typeof updateNav === "function") {
-    updateNav();
-  }
   typesetMath();
+
+  // Defer layout measurements to after paint to reduce jank
+  requestAnimationFrame(function () {
+    bumpFooter();
+    if (typeof updateNav === "function") {
+      updateNav();
+    }
+  });
 }
 
 let pageChromeInitialized = false;
@@ -223,6 +237,9 @@ function initPageChrome() {
     if (didResize) {
       didResize = false;
       bumpFooter();
+      if (typeof updateNav === "function") {
+        updateNav();
+      }
     }
   }, 250);
 }
@@ -233,4 +250,12 @@ initPage();
 document.addEventListener("turbo:load", function () {
   initPageChrome();
   initPage();
+});
+
+// Keep scroll jump soft: snap to top after render without animated thrash
+document.addEventListener("turbo:render", function () {
+  if ("scrollRestoration" in history) {
+    history.scrollRestoration = "manual";
+  }
+  window.scrollTo(0, 0);
 });

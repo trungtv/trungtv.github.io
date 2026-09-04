@@ -18,14 +18,16 @@ layout: compress
 
     {{ content }}
 
-    <div class="page__footer">
+    <div id="site-footer" class="page__footer" data-turbo-permanent>
       <footer>
         {% include footer/custom.html %}
         {% include footer.html %}
       </footer>
     </div>
 
-    {% include scripts.html %}
+    <div id="site-scripts" data-turbo-permanent>
+      {% include scripts.html %}
+    </div>
 
   </body>
 </html>

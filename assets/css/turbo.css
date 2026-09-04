@@ -1,0 +1,25 @@
+/* Smoother Turbo Drive navigations */
+@view-transition {
+  navigation: auto;
+}
+
+::view-transition-old(root),
+::view-transition-new(root) {
+  animation-duration: 160ms;
+  animation-timing-function: ease-out;
+}
+
+#main {
+  view-transition-name: main-panel;
+}
+
+::view-transition-old(main-panel),
+::view-transition-new(main-panel) {
+  animation-duration: 180ms;
+  animation-timing-function: ease-out;
+}
+
+.turbo-progress-bar {
+  height: 2px;
+  background-color: var(--global-link-color, #0072b1);
+}

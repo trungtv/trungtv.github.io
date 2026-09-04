@@ -1,0 +1,22 @@
+{% include base_path %}
+
+<li class="catalog__item{% if post.status == 'archived' %} catalog__item--archived{% endif %}">
+  <a class="catalog__link" href="{{ base_path }}{{ post.url }}">
+    <span class="catalog__item-main">
+      <span class="catalog__item-title">{{ post.title | markdownify | strip_html | strip }}</span>
+      {% if post.summary %}
+        <span class="catalog__item-summary">{{ post.summary | escape }}</span>
+      {% endif %}
+      <span class="catalog__item-meta">
+        {% if post.type %}{{ post.type }}{% endif %}
+        {% if post.venue %} · {{ post.venue }}{% endif %}
+        {% if post.date %} · {{ post.date | date: "%Y" }}{% endif %}
+      </span>
+    </span>
+    {% if post.topic_status %}
+      <span class="status-badge status-badge--{{ post.topic_status }}">{{ post.topic_status }}</span>
+    {% elsif post.status == "archived" %}
+      <span class="status-badge status-badge--archived">Archived</span>
+    {% endif %}
+  </a>
+</li>

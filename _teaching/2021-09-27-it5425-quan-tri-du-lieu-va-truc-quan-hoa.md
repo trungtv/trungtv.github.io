@@ -7,6 +7,7 @@ venue: "SOICT, HUST"
 date: 2021-09-27
 location: "Hanoi, Vietnam"
 status: active
+summary: "Quản trị dữ liệu và trực quan hóa với Python; dashboard và storytelling từ dữ liệu."
 ---
 
 ## IT5425 Data management and visualization  

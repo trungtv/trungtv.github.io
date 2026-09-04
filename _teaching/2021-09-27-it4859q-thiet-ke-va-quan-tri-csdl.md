@@ -7,6 +7,7 @@ venue: "SOICT, HUST"
 date: 2021-09-27
 location: "Hanoi, Vietnam"
 status: active
+summary: "Database tuning: schema, query, index và vận hành MySQL nâng cao."
 ---
 
 ## Course organization 

@@ -7,6 +7,7 @@ venue: "SOICT, HUST"
 date: 2020-03-08
 location: "Hanoi, Vietnam"
 status: archived
+summary: "Thông báo tổ chức học online qua Teams cho các lớp học kỳ 20192."
 ---
 
 Chào các em, 

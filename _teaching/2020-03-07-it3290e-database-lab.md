@@ -7,6 +7,7 @@ venue: "SOICT, HUST"
 date: 2020-03-07
 location: "Hanoi, Vietnam"
 status: active
+summary: "Thực hành CSDL (2 TC): SQL, schema, và bài lab trên GitHub."
 ---
 
 ## IT3290E Database Lab  

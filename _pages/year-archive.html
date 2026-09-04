@@ -10,47 +10,47 @@ redirect_from:
 
 {% include base_path %}
 
-{% assign open_topics = site.posts | where: "topic_status", "open" %}
-{% assign closed_topics = site.posts | where: "topic_status", "closed" %}
+{% assign open_topics = site.posts | where: "topic_status", "open" | sort: "title" %}
+{% assign closed_topics = site.posts | where: "topic_status", "closed" | sort: "title" %}
 
-<div class="topics">
-  <p class="topics__lede">
+<div class="catalog">
+  <p class="catalog__lede">
     Đề tài đồ án / project cho sinh viên.
     <a href="#open">Open</a> đang nhận sinh viên;
     <a href="#closed">Closed</a> đã kết thúc hoặc tạm dừng.
   </p>
 
-  <section class="topics__section" id="open" aria-labelledby="topics-open-heading">
-    <header class="topics__section-header">
-      <h2 id="topics-open-heading" class="topics__section-title">Open</h2>
-      <span class="topics__count">{{ open_topics.size }}</span>
+  <section class="catalog__section" id="open" aria-labelledby="topics-open-heading">
+    <header class="catalog__section-header">
+      <h2 id="topics-open-heading" class="catalog__section-title">Open</h2>
+      <span class="catalog__count">{{ open_topics.size }}</span>
     </header>
 
     {% if open_topics.size > 0 %}
-    <ul class="topics__list">
+    <ul class="catalog__list">
       {% for post in open_topics %}
-        {% include topic-list-item.html %}
+        {% include catalog-list-item.html %}
       {% endfor %}
     </ul>
     {% else %}
-    <p class="topics__empty">Hiện không có đề tài open.</p>
+    <p class="catalog__empty">Hiện không có đề tài open.</p>
     {% endif %}
   </section>
 
-  <section class="topics__section topics__section--closed" id="closed" aria-labelledby="topics-closed-heading">
-    <header class="topics__section-header">
-      <h2 id="topics-closed-heading" class="topics__section-title">Closed</h2>
-      <span class="topics__count">{{ closed_topics.size }}</span>
+  <section class="catalog__section catalog__section--muted" id="closed" aria-labelledby="topics-closed-heading">
+    <header class="catalog__section-header">
+      <h2 id="topics-closed-heading" class="catalog__section-title">Closed</h2>
+      <span class="catalog__count">{{ closed_topics.size }}</span>
     </header>
 
     {% if closed_topics.size > 0 %}
-    <ul class="topics__list">
+    <ul class="catalog__list">
       {% for post in closed_topics %}
-        {% include topic-list-item.html %}
+        {% include catalog-list-item.html %}
       {% endfor %}
     </ul>
     {% else %}
-    <p class="topics__empty">Không có đề tài closed.</p>
+    <p class="catalog__empty">Không có đề tài closed.</p>
     {% endif %}
   </section>
 </div>

@@ -7,6 +7,7 @@ venue: "SOICT, HUST"
 date: 2020-03-03
 location: "Hanoi, Vietnam"
 status: active
+summary: "English track: Hadoop/HDFS, NoSQL, Spark, and big-data architecture with labs."
 ---
 
 ## Teaching Schedule

@@ -7,6 +7,7 @@ venue: "SOICT, HUST"
 date: 2020-03-03
 location: "Hanoi, Vietnam"
 status: archived
+summary: "Giới thiệu học sâu: nền tảng mạng nơ-ron, thư viện và ứng dụng thực hành."
 ---
 
 ## Tài liệu tham khảo 

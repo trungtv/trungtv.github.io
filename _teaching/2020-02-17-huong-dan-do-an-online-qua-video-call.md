@@ -7,6 +7,7 @@ venue: "SOICT, HUST"
 date: 2020-02-17
 location: "Hanoi, Vietnam"
 status: archived
+summary: "Hướng dẫn họp online qua Microsoft Teams cho kỳ 20191 (giai đoạn COVID-19)."
 ---
 
 Do tình hình dịch bênh covid-19 diễn biến phức tạp, các em sinh viên được phân công dưới sự hướng dẫn của thầy có thể tham gia nhóm trên Microsoft Teams của trường để thực hiện các buổi video call thay cho gặp mặt trực tiếp tại trường. 

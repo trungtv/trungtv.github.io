@@ -7,25 +7,53 @@ author_profile: true
 
 {% include base_path %}
 
-{% assign courses = site.teaching | where: "type", "Course" | where: "status", "active" | reverse %}
-{% assign guidelines = site.teaching | where: "type", "Guideline" | where: "status", "active" | reverse %}
-{% assign archived = site.teaching | where: "status", "archived" | reverse %}
+{% assign courses = site.teaching | where: "type", "Course" | where: "status", "active" | sort: "title" %}
+{% assign guidelines = site.teaching | where: "type", "Guideline" | where: "status", "active" | sort: "title" %}
+{% assign archived = site.teaching | where: "status", "archived" | sort: "title" %}
 
-<p>Tài liệu môn học và hướng dẫn làm project / đồ án. Phần <strong>Archived</strong> giữ lại để tham khảo, không còn là lớp đang dạy.</p>
+<div class="catalog">
+  <p class="catalog__lede">
+    Tài liệu môn học và hướng dẫn làm project / đồ án.
+    <a href="#courses">Courses</a>
+    · <a href="#guidelines">Guidelines</a>
+    · <a href="#archived">Archived</a> (tham khảo, không còn là lớp đang dạy).
+  </p>
 
-<h2 id="courses" class="archive__subtitle">Courses</h2>
-{% for post in courses %}
-  {% include archive-single.html %}
-{% endfor %}
+  <section class="catalog__section" id="courses" aria-labelledby="teaching-courses-heading">
+    <header class="catalog__section-header">
+      <h2 id="teaching-courses-heading" class="catalog__section-title">Courses</h2>
+      <span class="catalog__count">{{ courses.size }}</span>
+    </header>
+    <ul class="catalog__list">
+      {% for post in courses %}
+        {% include catalog-list-item.html %}
+      {% endfor %}
+    </ul>
+  </section>
 
-<h2 id="guidelines" class="archive__subtitle">Guidelines</h2>
-{% for post in guidelines %}
-  {% include archive-single.html %}
-{% endfor %}
+  <section class="catalog__section" id="guidelines" aria-labelledby="teaching-guidelines-heading">
+    <header class="catalog__section-header">
+      <h2 id="teaching-guidelines-heading" class="catalog__section-title">Guidelines</h2>
+      <span class="catalog__count">{{ guidelines.size }}</span>
+    </header>
+    <ul class="catalog__list">
+      {% for post in guidelines %}
+        {% include catalog-list-item.html %}
+      {% endfor %}
+    </ul>
+  </section>
 
-{% if archived.size > 0 %}
-<h2 id="archived" class="archive__subtitle">Archived</h2>
-{% for post in archived %}
-  {% include archive-single.html %}
-{% endfor %}
-{% endif %}
+  {% if archived.size > 0 %}
+  <details class="catalog__section catalog__section--archived" id="archived">
+    <summary class="catalog__section-header catalog__section-header--summary">
+      <span class="catalog__section-title">Archived</span>
+      <span class="catalog__count">{{ archived.size }}</span>
+    </summary>
+    <ul class="catalog__list">
+      {% for post in archived %}
+        {% include catalog-list-item.html %}
+      {% endfor %}
+    </ul>
+  </details>
+  {% endif %}
+</div>

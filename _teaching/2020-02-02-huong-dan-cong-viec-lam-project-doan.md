@@ -7,6 +7,7 @@ venue: "SOICT, HUST"
 date: 2020-02-02
 location: "Hanoi, Vietnam"
 status: active
+summary: "Quy trình làm việc với GVHD: Teams, báo cáo tuần, lịch gặp, và điều kiện hoàn thành."
 ---
 
 0. Join Microsoft Teams và tạo channel riêng cho nhóm theo hướng dẫn của giáo viên.

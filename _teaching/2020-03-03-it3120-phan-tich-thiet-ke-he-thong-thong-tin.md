@@ -7,6 +7,7 @@ venue: "SOICT, HUST"
 date: 2020-03-03
 location: "Hanoi, Vietnam"
 status: archived
+summary: "Phân tích và thiết kế hệ thống thông tin với UML; bài tập lớn theo nhóm trên GitHub."
 ---
 
 ### Sách tham khảo

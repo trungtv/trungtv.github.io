@@ -7,6 +7,7 @@ venue: "SOICT, HUST"
 date: 2020-07-02
 location: "Hanoi, Vietnam"
 status: active
+summary: "Chuẩn bị thuyết trình và quy trình bảo vệ đồ án tốt nghiệp tại BKHN."
 ---
 
 ## Nguồn bài viết:

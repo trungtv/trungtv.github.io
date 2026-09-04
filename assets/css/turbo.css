@@ -5,18 +5,31 @@
 
 ::view-transition-old(root),
 ::view-transition-new(root) {
+  animation-duration: 140ms;
+  animation-timing-function: ease-out;
+}
+
+/* Keep Susy float grid: sidebar + page remain layout siblings of #main */
+#site-sidebar {
+  display: contents;
+}
+
+/* Only animate the changing content, not the permanent sidebar */
+.page,
+.archive,
+.splash {
+  view-transition-name: page-panel;
+}
+
+::view-transition-old(page-panel),
+::view-transition-new(page-panel) {
   animation-duration: 160ms;
   animation-timing-function: ease-out;
 }
 
-#main {
-  view-transition-name: main-panel;
-}
-
-::view-transition-old(main-panel),
-::view-transition-new(main-panel) {
-  animation-duration: 180ms;
-  animation-timing-function: ease-out;
+/* Academic Pages intro animation feels like jank on every Turbo visit */
+html.js #main {
+  animation: none !important;
 }
 
 .turbo-progress-bar {

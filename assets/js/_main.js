@@ -224,7 +224,9 @@ function initPage() {
   // Defer layout measurements to after paint to reduce jank
   requestAnimationFrame(function () {
     bumpFooter();
-    if (typeof updateNav === "function") {
+    if (typeof resetGreedyNav === "function") {
+      resetGreedyNav();
+    } else if (typeof updateNav === "function") {
       updateNav();
     }
   });

@@ -74,6 +74,18 @@
   @include breakpoint($x-large) {
     width: $right-sidebar-width;
   }
+
+  &.sticky {
+    @include breakpoint($large) {
+      clear: both;
+      position: -webkit-sticky;
+      position: sticky;
+      top: 5.5em;
+      float: right;
+      max-height: calc(100vh - 6.5em);
+      overflow-y: auto;
+    }
+  }
 }
 
 

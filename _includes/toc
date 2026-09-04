@@ -1,7 +1,11 @@
-<aside class="sidebar__right">
-<nav class="toc" markdown="1">
-<header><h4 class="nav__title"><i class="fa fa-{{ include.icon | default: 'file-text' }}"></i> {{ include.title | default: site.data.ui-text[site.locale].toc_label }}</h4></header>
-*  Auto generated table of contents
-{:toc .toc__menu}
-</nav>
+<aside class="sidebar__right{% if page.toc_sticky %} sticky{% endif %}">
+  <nav class="toc">
+    <header>
+      <h4 class="nav__title">
+        <i class="fa fa-{{ page.toc_icon | default: 'list' }}" aria-hidden="true"></i>
+        {{ page.toc_label | default: site.data.ui-text[site.locale].toc_label | default: "Mục lục" }}
+      </h4>
+    </header>
+    {% include toc.html sanitize=true html=content h_min=1 h_max=3 class="toc__menu" skip_no_ids=true flat_toc=true %}
+  </nav>
 </aside>

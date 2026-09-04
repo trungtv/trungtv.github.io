@@ -1,0 +1,12 @@
+/* Disable Academic Pages intro fade-ins that flash on every full navigation */
+.masthead,
+#main,
+.page__footer,
+.breadcrumbs,
+.page__hero,
+.page__hero-caption,
+.page__hero .page__title,
+.greedy-nav {
+  -webkit-animation: none !important;
+          animation: none !important;
+}

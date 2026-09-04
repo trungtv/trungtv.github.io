@@ -12,6 +12,14 @@
   document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
 </script>
 
+<!-- Kill intro fade immediately (also bypasses stale CDN-cached main.css) -->
+<style>
+  .masthead, #main, .page__footer, .breadcrumbs, .page__hero, .page__hero--overlay, .greedy-nav {
+    -webkit-animation: none !important;
+            animation: none !important;
+  }
+</style>
+
 <!-- For all browsers -->
-<link rel="stylesheet" href="{{ base_path }}/assets/css/main.css">
-<link rel="stylesheet" href="{{ base_path }}/assets/css/no-intro.css">
+<link rel="stylesheet" href="{{ base_path }}/assets/css/main.css?v={{ site.time | date: '%s' }}">
+<link rel="stylesheet" href="{{ base_path }}/assets/css/no-intro.css?v={{ site.time | date: '%s' }}">

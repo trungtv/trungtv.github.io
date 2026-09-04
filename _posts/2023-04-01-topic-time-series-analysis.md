@@ -1,11 +1,11 @@
 ---
-published: true
-title: Time series analysis
-layout: post
-categories:
+title: 'Time series analysis'
+date: 2023-04-01
+permalink: /posts/2023/04/topic-time-series-analysis/
+tags:
   - Project topics for students
-share: true
 ---
+
 ## Overview
 
 Nhu cầu ước lượng, đánh giá và phán đoán xu thế diễn biến giá cổ phiếu trên thị trường tài chính ngày càng được quan tâm và có giá trị với nhà đầu tư chứng khoán. 

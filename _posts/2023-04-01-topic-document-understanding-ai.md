@@ -1,11 +1,11 @@
 ---
-published: true
-layout: post
-categories:
+title: 'Document understanding AI'
+date: 2023-04-01
+permalink: /posts/2023/04/topic-document-understanding-ai/
+tags:
   - Project topics for students
-share: true
-title: Document understanding AI
 ---
+
 ## Mục tiêu
 
 Nghiên cứu các công nghệ lõi liên quan đến bài toán hiểu và bóc tách các văn bản bán cấu trúc tự động. Đây không phải là bài toán NER (Named Entity Recognition) đơn thuần mà tập trung khai thác các đặc trưng đa thể thức như: đặc trưng văn bản, đặc trưng cấu trúc, đặc trưng trực quan, vvv. Hơn nữa,

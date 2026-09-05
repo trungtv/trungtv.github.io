@@ -18,7 +18,7 @@
   @include breakpoint($large) {
     @include span(10 of 12 last);
     @include prefix(0.5 of 12);
-    @include suffix(2 of 12);
+    /* no suffix — TOC sits under the title, not in a right column */
   }
 
   .page__inner-wrap {
@@ -28,76 +28,6 @@
     .page__meta,
     .page__share {
       @include full();
-    }
-  }
-
-  /* TOC: right column when the left author sidebar is already shown;
-     below that, TOC stays a static block under the title. */
-  &.page--toc {
-    @include breakpoint($large) {
-      /* reclaim Susy suffix(2 of 12) — content + TOC share the full page width */
-      padding-right: 0 !important;
-      margin-right: 0 !important;
-
-      .page__inner-wrap {
-        display: grid;
-        /* Content takes remaining space; TOC only as wide as needed (capped). */
-        grid-template-columns: minmax(0, 1fr) minmax(11rem, #{$right-sidebar-width});
-        column-gap: 1.75rem;
-        align-items: start;
-        float: none !important;
-        width: auto !important;
-        clear: none !important;
-
-        > * {
-          float: none !important;
-          width: auto !important;
-          max-width: 100%;
-          clear: none !important;
-          min-width: 0;
-        }
-
-        /* Title uses full width — avoids a big empty strip beside the heading */
-        > header {
-          grid-column: 1 / -1;
-        }
-
-        > .sidebar__right {
-          grid-column: 2;
-          grid-row: 2 / -1;
-          width: 100% !important;
-          margin: 0;
-          justify-self: stretch;
-        }
-
-        > .sidebar__right.sticky {
-          position: sticky !important;
-          top: 5.5em;
-          max-height: calc(100vh - 6.5em);
-          overflow-y: auto;
-        }
-
-        > .page__content,
-        > .page__meta,
-        > .page__share,
-        > .pagination {
-          grid-column: 1;
-        }
-      }
-    }
-
-    .sidebar__right {
-      float: none !important;
-      width: auto;
-      margin: 0 0 1.5em;
-      z-index: 1;
-
-      &.sticky {
-        position: static !important;
-        top: auto;
-        max-height: none;
-        overflow: visible;
-      }
     }
   }
 }

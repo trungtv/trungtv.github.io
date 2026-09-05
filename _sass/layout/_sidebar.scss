@@ -87,6 +87,7 @@
     background: transparent;
     border: 0;
     padding: 0;
+    margin: 0 0 0.5em;
     text-transform: none;
     letter-spacing: normal;
   }
@@ -114,6 +115,7 @@
 
       &:hover {
         text-decoration: underline;
+        color: var(--global-link-color);
       }
     }
 
@@ -133,6 +135,15 @@
     li ul li ul li ul > li a {
       padding-left: 3rem;
     }
+  }
+
+  /* Inline TOC under the page title */
+  &--inline {
+    float: none;
+    width: auto;
+    max-width: none;
+    margin: 0 0 1.75em;
+    position: static;
   }
 }
 

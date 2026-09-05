@@ -377,11 +377,11 @@
    ========================================================================== */
 
 .toc {
-  font-family: $sans-serif-narrow;
-  color: var(--global-text-color-light);
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  background-color: #fff;
+  font-family: $global-font-family;
+  color: var(--global-text-color);
+  text-transform: none;
+  letter-spacing: normal;
+  background-color: var(--global-bg-color);
   border: 1px solid var(--global-border-color);
   border-radius: $border-radius;
   box-shadow: $box-shadow;
@@ -389,6 +389,9 @@
   .nav__title {
     color: #fff;
     font-size: $type-size-6;
+    font-family: $global-font-family;
+    text-transform: none;
+    letter-spacing: normal;
     background: var(--global-base-color);
     border-top-left-radius: $border-radius;
     border-top-right-radius: $border-radius;
@@ -400,21 +403,26 @@
   padding: 0;
   width: 100%;
   list-style: none;
-  font-size: 0.8rem;
+  font-family: $global-font-family;
+  font-size: 1em;
+  text-transform: none;
+  letter-spacing: normal;
 
   a {
     display: block;
     padding: 0.5rem 1rem;
-    color: var(--global-code-text-color);
-    font-size: $type-size-7;
-    font-weight: bold;
+    color: var(--global-text-color);
+    font-size: 1em;
+    font-weight: 600;
     line-height: 1.5;
     border-bottom: 1px solid var(--global-border-color);
     text-decoration-line: none !important;
+    text-transform: none;
+    letter-spacing: normal;
 
     &:hover {
-      color: #000;
-      background: var(--global-link-color-hover);
+      color: var(--global-link-color-hover);
+      background: var(--global-border-color);
     }
   }
 

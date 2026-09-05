@@ -75,13 +75,20 @@
   border-radius: $border-radius;
   box-shadow: $box-shadow;
   padding: 1em;
+  font-family: $global-font-family;
+  text-transform: none;
+  letter-spacing: normal;
 
   .nav__title {
     color: var(--global-text-color);
-    font-size: $type-size-6;
+    font-size: 1em;
+    font-family: $global-font-family;
+    font-weight: 700;
     background: transparent;
     border: 0;
     padding: 0;
+    text-transform: none;
+    letter-spacing: normal;
   }
 
   .toc__menu {
@@ -89,16 +96,21 @@
     padding: 0;
     width: 100%;
     list-style: none;
-    font-size: $type-size-6;
+    font-family: $global-font-family;
+    font-size: 1em;
+    text-transform: none;
+    letter-spacing: normal;
 
     a {
       display: block;
       padding: 0.25rem 0;
       color: var(--global-text-color);
-      font-size: $type-size-7;
+      font-size: 1em;
       font-weight: normal;
       line-height: 1.5;
       border-bottom: 0;
+      text-transform: none;
+      letter-spacing: normal;
 
       &:hover {
         text-decoration: underline;
@@ -106,7 +118,7 @@
     }
 
     > li > a {
-      font-weight: bold;
+      font-weight: 600;
     }
 
     li ul > li a {

@@ -35,16 +35,16 @@
      below that, TOC stays a static block under the title. */
   &.page--toc {
     @include breakpoint($large) {
-      /* reclaim Susy suffix(2 of 12) — that empty strip is the TOC column */
+      /* reclaim Susy suffix(2 of 12) — content + TOC share the full page width */
       padding-right: 0 !important;
       margin-right: 0 !important;
 
       .page__inner-wrap {
         display: grid;
-        grid-template-columns: minmax(0, 1fr) minmax(12rem, $right-sidebar-width);
-        column-gap: 1.25rem;
+        /* Content takes remaining space; TOC only as wide as needed (capped). */
+        grid-template-columns: minmax(0, 1fr) minmax(11rem, #{$right-sidebar-width});
+        column-gap: 1.75rem;
         align-items: start;
-        /* cancel Susy full()/float so grid children stay in their tracks */
         float: none !important;
         width: auto !important;
         clear: none !important;
@@ -57,13 +57,14 @@
           min-width: 0;
         }
 
+        /* Title uses full width — avoids a big empty strip beside the heading */
         > header {
-          grid-column: 1;
+          grid-column: 1 / -1;
         }
 
         > .sidebar__right {
           grid-column: 2;
-          grid-row: 1 / -1;
+          grid-row: 2 / -1;
           width: 100% !important;
           margin: 0;
           justify-self: stretch;

@@ -6,7 +6,7 @@ permalink: /teaching/it3120-phan-tich-thiet-ke-he-thong-thong-tin
 venue: "SOICT, HUST"
 date: 2020-03-03
 location: "Hanoi, Vietnam"
-status: archived
+status: active
 summary: "Phân tích và thiết kế hệ thống thông tin với UML; bài tập lớn theo nhóm trên GitHub."
 ---
 

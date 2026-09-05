@@ -433,6 +433,29 @@
     }
   }
 
+  .toc__item--h1 > a {
+    font-weight: 700;
+  }
+
+  .toc__item--h2 > a {
+    font-weight: 600;
+  }
+
+  .toc__item--h3 > a {
+    font-weight: normal;
+    padding-left: 1rem;
+  }
+
+  &:has(.toc__item--h1) {
+    .toc__item--h2 > a {
+      padding-left: 0.75rem;
+    }
+
+    .toc__item--h3 > a {
+      padding-left: 1.5rem;
+    }
+  }
+
   li ul > li a {
     padding-left: 1rem;
     font-weight: normal;

@@ -5,5 +5,9 @@
       {{ page.toc_label | default: site.data.ui-text[site.locale].toc_label | default: "Mục lục" }}
     </h4>
   </header>
-  {% include toc.html sanitize=true html=content h_min=1 h_max=3 class="toc__menu" skip_no_ids=true flat_toc=true %}
+  {% comment %}
+    flat_toc + item_class: giữ đủ mọi heading (kể cả khi bài nhảy cấp h3→h1),
+    đồng thời thể hiện hierarchy bằng indent theo cấp.
+  {% endcomment %}
+  {% include toc.html sanitize=true html=content h_min=1 h_max=3 class="toc__menu" item_class="toc__item toc__item--h%level%" skip_no_ids=true flat_toc=true %}
 </nav>
